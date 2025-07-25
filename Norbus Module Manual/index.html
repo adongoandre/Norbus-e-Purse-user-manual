@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbus e-Purse System - User Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+</head>
+
+<body class="bg-light">
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container-fluid manual-container">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar ">
+                    <div class="sidebar-header">
+                        <h4 class="mb-0"><i class="fas fa-wallet me-2"></i>Norbus e-Purse</h4>
+                        <small class="opacity-75">System User Manual</small>
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+                        <div class="nav-item">
+                            <a href="#overview" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                System Overview
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#getting-started" class="nav-link">
+                                <i class="fas fa-play-circle"></i>
+                                Getting Started
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#organization" class="nav-link">
+                                <i class="fas fa-building"></i>
+                                Organization 
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#general-setup" class="nav-link">
+                                <i class="fas fa-cogs"></i>
+                                General Setup
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#access-management" class="nav-link">
+                                <i class="fas fa-users-cog"></i>
+                                Access Management
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#sms&automations" class="nav-link">
+                                <i class="fas fa-comments"></i>
+                                SMS Setups & Automation
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#email&automation" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Email Setups & Automation
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#dataTemplates" class="nav-link">
+                                <i class="fas fa-file-alt"></i>
+                                Data Templates
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#unsubmittedItems" class="nav-link">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#authorizations" class="nav-link">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#systemAvailability" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i>
+                                System Availability
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#troubleshooting&support" class="nav-link">
+                                <i class="fas fa-wrench"></i>
+                                Troubleshooting & Support
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <div class="main-content">
+                    <nav class="nav">
+                        <div class="nav-item">
+                            <a href="#generalSetups" class="nav-link page">
+                                GS
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#crm" class="nav-link">
+                                CRM
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#cis" class="nav-link">
+                                CIS
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#assetManager" class="nav-link">
+                                AM
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#providentFund" class="nav-link">
+                                PF
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#fundAccounting" class="nav-link">
+                                FA
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#communication" class="nav-link">
+                                S&E
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reporting" class="nav-link">
+                                Reporting
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#backOfficeCashier" class="nav-link">
+                                BOC
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#teller" class="nav-link">
+                                Teller
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="position-relative">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-box" placeholder="Search the manual..." id="searchInput">
+                        </div>
+                    </div>
+                    <!-- System Overview -->
+                    <section id="overview" class="content-section fade-in">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-home"></i>
+                                System Overview
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome to Norbus e-Purse System</h5>
+                                <p class="card-text">The Norbus e-Purse is a comprehensive financial management platform designed 
+                                    for organizations to manage digital wallet services, user access, and financial operations. 
+                                    This system provides enterprise-level security and functionality for managing electronic purse services.</p>
+                            
+                                <p class="card-text">The General module is used for company-level configurations and setups that apply to other system modules. Key functionalities include:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Enforcement of Maker / Checker Rules</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>LDAPs Configurations</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Multi-Factor Authentication configurations</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>User Roles and Access Assignments</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Password Complexity Settings</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Third-Party Registrations for API authorizations</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>System-wide data templates</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Features Overview -->
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h6>Organization Management</h6>
+                                <p class="small text-muted">Manage company settings, branches, and configurations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h6>General Setup</h6>
+                                <p class="small text-muted">Configure currencies, banks, and system preferences</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h6>Access Control</h6>
+                                <p class="small text-muted">User roles, permissions, and authentication</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h6>SMS Automation</h6>
+                                <p class="small text-muted">Automated SMS notifications and templates</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h6>Email Automation</h6>
+                                <p class="small text-muted">Automated email notifications and templates</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h6>Data Templates</h6>
+                                <p class="small text-muted">Manage data templates for various operations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hourglass-half"></i>
+                                </div>
+                                <h6>Unsubmitted Items</h6>
+                                <p class="small text-muted">Pending items for review and submission</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h6>Authorizations</h6>
+                                <p class="small text-muted">Pending authorizations for system changes</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <h6>System Availability</h6>
+                                <p class="small text-muted">Working days, holidays, and scheduling</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Getting Started -->
+                    <section id="getting-started" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-play-circle"></i>
+                                Getting Started
+                            </h2>
+                        </div>
+                        <!-- Getting Started Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">System Access Requirements</h5>
+                                <div class="workflow-step">
+                                    <span class="step-number">1</span>
+                                    <strong>Login Credentials:</strong> Ensure you have valid username and password provided by your system administrator.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">2</span>
+                                    <strong>Browser Requirements:</strong> Use a modern web browser (Chrome, Firefox, Safari, Edge) with JavaScript enabled.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">3</span>
+                                    <strong>Network Access:</strong> Ensure stable internet connection and access to the organization's network.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">4</span>
+                                    <strong>User Permissions:</strong> Your access level determines which features are available to you.
+                                </div>
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Security Note:</strong> Always log out when finished and never share your login credentials.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Navigation Structure -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Main Navigation Structure</h5>
+                                <div class="menu-hierarchy">
+                                    <div class="menu-path">Home → Dashboard</div><br>
+                                    <div class="menu-path">Organization → Company Settings</div><br>
+                                    <div class="menu-path">General Setup → Currencies</div><br>
+                                    <div class="menu-path">Access Management → User Account</div><br>
+                                    <div class="menu-path">SMS & Automation → SMS Setup</div><br>
+                                    <div class="menu-path">Email & Automation → Email Setup</div><br>
+                                    <div class="menu-path">Data Templates → Manage Templates</div><br>
+                                    <div class="menu-path">Unsubmitted Items → Pending Items</div><br>
+                                    <div class="menu-path">Authorizations → Items Pending Authorizations</div><br>
+                                    <div class="menu-path">System Availability → Working Days</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Organization Management -->
+                    <section id="organization" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-building"></i>
+                                Organization Management
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Organization Features</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Company Configuration</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>Company Settings:</strong> Basic company information and configuration</li>
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>Access Preferences:</strong> Company-wide access control settings</li>
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>Company Branches:</strong> Manage multiple business locations</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Security & Integration</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>MFA Configurations:</strong> Multi-factor authentication setup</li>
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>LDAP Configurations:</strong> Directory service integration</li>
+                                            <li><i class="fas fa-check text-success me-2"></i><strong>T24 & Teller Configurations:</strong> Banking system integrations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- General Setup -->
+                    <section id="general-setup" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i>
+                                General Setup
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">System Configuration Options</h5>
+                                
+                                <div class="accordion" id="setupAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#currencySetup">
+                                                <i class="fas fa-coins me-2"></i>Currency Management
+                                            </button>
+                                        </h2>
+                                        <div id="currencySetup" class="accordion-collapse collapse show" data-bs-parent="#setupAccordion">
+                                            <div class="accordion-body">
+                                                Configure supported currencies for transactions. This includes setting exchange rates, default currency, and regional currency preferences.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bankSetup">
+                                                <i class="fas fa-university me-2"></i>Banking Configuration
+                                            </button>
+                                        </h2>
+                                        <div id="bankSetup" class="accordion-collapse collapse" data-bs-parent="#setupAccordion">
+                                            <div class="accordion-body">
+                                                Manage bank listings, bank codes, and payment modes. Configure integration parameters for various financial institutions.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eventSetup">
+                                                <i class="fas fa-calendar-check me-2"></i>Event Management
+                                            </button>
+                                        </h2>
+                                        <div id="eventSetup" class="accordion-collapse collapse" data-bs-parent="#setupAccordion">
+                                            <div class="accordion-body">
+                                                Monitor and manage pending events in the system. View event logs and configure automated event processing.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Access Management -->
+                    <section id="access-management" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-users-cog"></i>
+                                Access Management
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">User Access Control</h5>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded">
+                                            <i class="fas fa-user-shield fa-2x text-primary mb-2"></i>
+                                            <h6>Access Roles</h6>
+                                            <p class="small text-muted">Define user roles and permissions for different system functions</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded">
+                                            <i class="fas fa-users fa-2x text-success mb-2"></i>
+                                            <h6>User Accounts</h6>
+                                            <p class="small text-muted">Create and manage user accounts with appropriate access levels</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded">
+                                            <i class="fas fa-history fa-2x text-info mb-2"></i>
+                                            <h6>Login Activities</h6>
+                                            <p class="small text-muted">Monitor user login activities and access patterns</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-success mt-3">
+                                    <i class="fas fa-shield-alt me-2"></i>
+                                    <strong>Security Best Practice:</strong> Regularly review user access rights and remove unused accounts.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- SMS Setups & Automation -->
+                    <section id="sms&automations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-comments"></i>
+                                SMS Setups & Automation
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SMS Configuration</h5>
+                                <p class="card-text">Configure SMS settings for notifications, alerts, and automated messages.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Setup SMS Provider</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Check Account Balance</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Manage SMS Templates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Setup SMS Automation</li>
+                                </ul>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Note:</strong> Ensure your SMS provider supports the required features for integration.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Email Setups & Automation -->
+                    <section id="email&automation" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-envelope"></i>
+                                Email Setups & Automation
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Email Configuration</h5>
+                                <p class="card-text">Configure email settings for notifications, alerts, and automated messages.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Setup SMTP Configuration</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>CIS Email Setups</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>PF Email Setups</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Manage Email Templates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Setup Email Automation</li>
+                                </ul>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Note:</strong> Ensure your SMTP server settings are correct for successful email delivery.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Data Templates -->
+                    <section id="dataTemplates" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-file-alt"></i>
+                                Data Templates
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Manage Data Templates</h5>
+                                <p class="card-text">Create and manage data templates for various operations within the Norbus e-Purse system.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Download Securities Price Template</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Download Receipt Templates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Download PF Templates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Download Portfolio Templates</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Download Withdrawal Templates</li>
+                                </ul>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Tip:</strong> Use templates to standardize data entry and improve consistency across the system.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Unsubmitted Items -->
+                    <section id="unsubmittedItems" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Items for Review</h5>
+                                <p class="card-text">Review and submit items that are pending approval or further action.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>General Setups Pending Submission</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>User Setups Pending Submission</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Access Management Items Pending submission</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>SMS and Email Setups Pending submission</li>
+                                </ul>
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Reminder:</strong> Unsubmitted items may delay system updates and approvals. Ensure timely submission.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Authorizations -->
+                    <section id="authorizations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Authorizations</h5>
+                                <p class="card-text">Review and authorize items that require approval before proceeding.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>General Setups Review</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Access Management Review</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>SMS and Email Setups Review</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Data Templates Review</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Unsubmitted Items Review</li>
+                                </ul>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Note:</strong> Authorizations are crucial for maintaining system integrity and ensuring proper workflow.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- System Availability -->
+                     <section id="systemAvailability" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-calendar"></i>
+                                System Availability
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Working Days & Holidays</h5>
+                                <p class="card-text">Configure system availability settings including working days and holidays.</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-calendar-check text-primary me-2"></i>Working Days</h6>
+                                        <ul class="list-unstyled ms-3">
+                                            <li><i class="fas fa-check text-success me-2"></i>Global Working Days Configuration</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>User-specific Working Days Configuration</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-calendar-times text-danger me-2"></i>Holidays</h6>
+                                        <ul class="list-unstyled ms-3">
+                                            <li><i class="fas fa-check text-success me-2"></i>Global Holidays Management</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>User-specific Holidays Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Important:</strong> Ensure working days and holidays are configured correctly to avoid disruptions in system operations.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Troubleshooting and Support Section -->
+                    <section id="troubleshooting&support" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-wrench"></i>
+                                Troubleshooting, Support & Resources
+                            </h2>
+                        </div>
+                        <!-- Troubleshooting Section -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Common Issues & Solutions</h5>
+                                
+                                <div class="accordion" id="troubleshootingAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loginIssues">
+                                                <i class="fas fa-sign-in-alt me-2"></i>Login Issues
+                                            </button>
+                                        </h2>
+                                        <div id="loginIssues" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <strong>Problem:</strong> Unable to login to the system<br>
+                                                <strong>Solutions:</strong>
+                                                <ul>
+                                                    <li>Verify username and password are correct</li>
+                                                    <li>Check if account is locked or expired</li>
+                                                    <li>Ensure browser cookies and JavaScript are enabled</li>
+                                                    <li>Contact system administrator for password reset</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accessDenied">
+                                                <i class="fas fa-ban me-2"></i>Access Denied Errors
+                                            </button>
+                                        </h2>
+                                        <div id="accessDenied" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <strong>Problem:</strong> "Access Denied" when trying to access certain features<br>
+                                                <strong>Solutions:</strong>
+                                                <ul>
+                                                    <li>Check your user role permissions</li>
+                                                    <li>Verify you have the required access level</li>
+                                                    <li>Request additional permissions from administrator</li>
+                                                    <li>Log out and log back in to refresh permissions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#performanceIssues">
+                                                <i class="fas fa-tachometer-alt me-2"></i>Performance Issues
+                                            </button>
+                                        </h2>
+                                        <div id="performanceIssues" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <strong>Problem:</strong> System running slowly or timing out<br>
+                                                <strong>Solutions:</strong>
+                                                <ul>
+                                                    <li>Clear browser cache and cookies</li>
+                                                    <li>Check network connectivity</li>
+                                                    <li>Close unnecessary browser tabs</li>
+                                                    <li>Try accessing during off-peak hours</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dataIssues">
+                                                <i class="fas fa-database me-2"></i>Data Loading Issues
+                                            </button>
+                                        </h2>
+                                        <div id="dataIssues" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <strong>Problem:</strong> Data not loading or showing incorrectly<br>
+                                                <strong>Solutions:</strong>
+                                                <ul>
+                                                    <li>Refresh the page (F5 or Ctrl+R)</li>
+                                                    <li>Check date range filters</li>
+                                                    <li>Verify data permissions</li>
+                                                    <li>Contact administrator if data appears corrupted</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning mt-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Important:</strong> If issues persist, document the error message and steps taken before contacting support.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Support Section -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Get Help & Support</h5>
+                                <p>Need assistance with the Norbus e-Purse system? We're here to help!</p>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded h-100">
+                                            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                                            <h6>Technical Support</h6>
+                                            <p class="small text-muted">24/7 technical assistance for system issues</p>
+                                            <div class="menu-path">support@norbus.com</div>
+                                            <div class="menu-path mt-2">+1-800-NORBUS-1</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded h-100">
+                                            <i class="fas fa-book fa-3x text-success mb-3"></i>
+                                            <h6>Documentation</h6>
+                                            <p class="small text-muted">Comprehensive guides and API documentation</p>
+                                            <div class="menu-path">docs.norbus.com</div>
+                                            <div class="menu-path mt-2">Knowledge Base</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center p-3 border rounded h-100">
+                                            <i class="fas fa-users fa-3x text-info mb-3"></i>
+                                            <h6>Training</h6>
+                                            <p class="small text-muted">User training and certification programs</p>
+                                            <div class="menu-path">training@norbus.com</div>
+                                            <div class="menu-path mt-2">Webinar Schedule</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h6><i class="fas fa-clock me-2"></i>Support Hours</h6>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><strong>Critical Issues:</strong> 24/7 availability</li>
+                                                    <li><strong>General Support:</strong> Mon-Fri, 8AM-6PM EST</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><strong>Training Sessions:</strong> By appointment</li>
+                                                    <li><strong>System Maintenance:</strong> Sat 2AM-4AM EST</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-success mt-3">
+                                    <i class="fas fa-star me-2"></i>
+                                    <strong>Premium Support:</strong> Enterprise customers receive priority support with dedicated account managers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quick Reference</h5>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>System Information</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>Version:</strong> Norbus e-Purse v2.1</li>
+                                            <li><strong>Last Updated:</strong> July 2025</li>
+                                            <li><strong>Environment:</strong> Production</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Emergency Contacts</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>System Admin:</strong> admin@norbus.com</li>
+                                            <li><strong>Security Team:</strong> security@norbus.com</li>
+                                            <li><strong>Emergency Line:</strong> +1-800-URGENT-1</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <button class="btn border-0 back-to-top" id="backToTop" name="backToTop" title="Back to Top">
+        <i class="fa-solid fa-circle-arrow-up fa-bounce text-success"></i>
+    </button>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
