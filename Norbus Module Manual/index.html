@@ -934,12 +934,12 @@
                                         <div id="pfEmailSetups" class="accordion-collapse collapse" data-bs-parent="#emailSetupAccordion">
                                             <div class="accordion-body">
                                                 <p>PF Email Setups allow you to configure email settings specifically for the Provident Fund (PF) system. 
-                                                    You can manage templates, recipients, and automation rules for PF-related emails.
+                                                    For viewing and editing all broadcast email details for schemes.
                                                 </p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
                                                     <img src="images/pf email setups.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
-                                                <p>Clicking on <strong>set up PF email</strong> allows you to configure a new PF email setup</p>
+                                                <p>Clicking on <strong>Edit</strong> allows you to configure a PF email setup</p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
                                                     <img src="images/pf email setups2.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
@@ -959,11 +959,15 @@
                                                     You can customize the content, subject, and formatting of emails sent from the system.
                                                 </p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
-                                                    <img src="images/manage email templates.png" alt="#" style="width: 100%; height: auto;">
+                                                    <img src="images/email template.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
                                                 <p>Clicking on <strong>new template</strong> allows you to create a new email template</p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
-                                                    <img src="images/manage email templates2.png" alt="#" style="width: 100%; height: auto;">
+                                                    <img src="images/email template2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>while clicking on the <strong>Edit</strong> button allows you to edit an existing email template.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/email template3.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
                                             </div>
                                         </div>
@@ -981,11 +985,11 @@
                                                     You can set triggers, actions, and schedules to ensure timely notifications and alerts.
                                                 </p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
-                                                    <img src="images/setup email automation.png" alt="#" style="width: 100%; height: auto;">
+                                                    <img src="images/email automation.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
                                                 <p>Clicking on <strong>add automation</strong> allows you to create a new email automation schedule</p>
                                                 <div style="max-width: 800px; margin: 0 auto;">
-                                                    <img src="images/setup email automation2.png" alt="#" style="width: 100%; height: auto;">
+                                                    <img src="images/email automation2.png" alt="#" style="width: 100%; height: auto;">
                                                 </div>
                                             </div>
                                         </div>
@@ -1009,15 +1013,38 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Manage Data Templates</h5>
-                                <p class="card-text">Create and manage data templates for various operations within the Norbus e-Purse system.</p>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2"></i>Download Securities Price Template</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Download Receipt Templates</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Download PF Templates</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Download Portfolio Templates</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Download Withdrawal Templates</li>
-                                </ul>
+                                <h5 class="card-title">Download data templates for various operations within the system.</h5>
+                                <p class="card-text">These data templates are used to organize bulk data for uploads into the various models of the sysytem</p>
+                                <div class="accordion" id="dataTemplatesAccordion">
+                                    <div class=" accordion-item">
+                                        <h2 class="accordion-header text-center p-3">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#dataTemplatesSection">
+                                                <i class="fas fa-file-download fa-4x mb-2"></i>
+                                                <ul class="list-unstyled">
+                                                    <li>Download Securities Price Template</li>
+                                                    <li>Download Receipt Templates</li>
+                                                    <li>Download PF Templates</li>
+                                                    <li>Download Portfolio Templates</li>
+                                                    <li>Download Withdrawal Templates</li>
+                                                </ul>
+                                            </button>
+                                        </h2>
+                                        <div id="dataTemplatesSection" class="accordion-collapse collapse" data-bs-parent="#dataTemplatesAccordion">
+                                            <div class="accordion-body">
+                                                <p>Data Templates allow you to download pre-defined templates for various data uploads within the system. 
+                                                    These templates help ensure data consistency and accuracy when uploading bulk data.
+                                                </p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/data templates.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/data templates2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="alert alert-info">
                                     <i class="fas fa-info-circle me-2"></i>
                                     <strong>Tip:</strong> Use templates to standardize data entry and improve consistency across the system.
@@ -1037,7 +1064,43 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Pending Items for Review</h5>
-                                <p class="card-text">Review and submit items that are pending approval or further action.</p>
+                                <p class="card-text">All general setups that were saved without ticking the <strong>submit to checker</strong> 
+                                    button will be pending submission here.
+                                    All user setups that were saved without ticking the <strong>submit to checker</strong> 
+                                    button will be pending submission here.
+                                </p>
+                                <p>All changes made will remain in the Unsubmitted items list</p>
+                                <div class="accordion" id="emailSetupAccordion">
+                                    <!-- SMTP Configuration -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smtpConfiguration">
+                                                <i class="fas fa-server fa-fw me-2"></i>SMTP Configuration
+                                            </button>
+                                        </h2>
+                                        <div id="smtpConfiguration" class="accordion-collapse collapse" data-bs-parent="#emailSetupAccordion">
+                                            <div class="accordion-body">
+                                                <p>SMTP Configuration allows you to set up and manage your SMTP server settings for email delivery. 
+                                                    You can configure the server address, port, authentication, and security options.
+                                                </p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/smtp configuration.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>Add SMTP</strong> allows you to set up a new SMTP configuration</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/smtp configuration2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>while clicking on the <strong>Edit</strong> button allows you to edit an existing SMTP configuration.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/smtp configuration3.png" alt="#" style="width: 100%; height: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <div class="card-body">
+                                
+                                
+
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-check text-success me-2"></i>General Setups Pending Submission</li>
                                     <li><i class="fas fa-check text-success me-2"></i>User Setups Pending Submission</li>
