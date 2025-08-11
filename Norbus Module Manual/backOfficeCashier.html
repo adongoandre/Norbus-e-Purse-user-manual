@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbus e-Purse - Cashier Module Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="bg-light">
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container-fluid manual-container">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <h4 class="mb-0"><i class="fas fa-cash-register me-2"></i>Norbus e-Purse</h4>
+                        <small class="opacity-75">Cashier Module Manual</small>
+                    </div>
+                    <nav class="sidebar-nav">
+                        <div class="nav-item">
+                            <a href="#overview" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                Module Overview
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#cis-receipts" class="nav-link">
+                                <i class="fas fa-receipt"></i>
+                                CIS Receipts
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#cis-redemptions" class="nav-link">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                CIS Redemptions
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#am-receipts" class="nav-link">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                Asset Manager Receipts
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#am-withdrawals" class="nav-link">
+                                <i class="fas fa-money-bill-transfer"></i>
+                                Asset Manager Withdrawals
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#pf-contributions" class="nav-link">
+                                <i class="fas fa-piggy-bank"></i>
+                                PF Contributions
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#pf-withdrawals" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                PF Withdrawals
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <div class="main-content">
+                    <!-- Module Nav -->
+                    <nav class="nav">
+                        <div class="nav-item">
+                            <a href="generalSetups.html" class="module-link">GS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CRM.html" class="module-link">CRM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CIS.html" class="module-link">CIS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="assetManager.html" class="module-link">AM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="Provident&groupFunds.html" class="module-link">PF</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="fundAccounting.html" class="module-link">FA</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="communication.html" class="module-link">S&E</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="reporting.html" class="module-link">Reporting</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="backOfficeCashier.html" class="module-link active">BOC</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="teller.html" class="module-link ">Teller</a>
+                        </div>
+                    </nav>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="position-relative">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-box" placeholder="Search cashier operations..." id="searchInput">
+                        </div>
+                    </div>
+                    <!-- System Overview -->
+                    <section id="overview" class="content-section fade-in">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-cash-register"></i>
+                                Cashier Module Overview
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome to Norbus e-Purse Cashier Module</h5>
+                                <p class="card-text">The Cashier module serves as the primary transaction processing hub for all 
+                                    financial operations across the system. It handles receipts, withdrawals, contributions, 
+                                    and redemptions with comprehensive workflow management and real-time notifications.</p>
+                                <p class="card-text">The Cashier Module provides complete functionality for:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>CIS receipt capture and verification</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Redemption request processing</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Asset manager transaction handling</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Provident fund contribution management</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Withdrawal and termination processing</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Bulk upload and batch processing</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Real-time workflow notifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Features Overview -->
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+                                <h6>CIS Operations</h6>
+                                <p class="small text-muted">Handle collective investment scheme receipts and redemptions</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h6>Asset Manager</h6>
+                                <p class="small text-muted">Process asset manager receipts and withdrawal requests</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <h6>PF Contributions</h6>
+                                <p class="small text-muted">Manage provident fund member contributions and uploads</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h6>PF Withdrawals</h6>
+                                <p class="small text-muted">Process withdrawal and termination requests efficiently</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <h6>Bulk Processing</h6>
+                                <p class="small text-muted">Upload and process multiple transactions simultaneously</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <h6>Live Notifications</h6>
+                                <p class="small text-muted">Real-time alerts for pending submissions and approvals</p>
+                            </div>
+                        </div>
+                        <!-- Getting Started Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Getting Started with Cashier Operations</h5>
+                                <div class="workflow-step">
+                                    <span class="step-number">1</span>
+                                    <strong>Transaction Capture:</strong> Create new transactions using the appropriate capture forms for each operation type.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">2</span>
+                                    <strong>Submission Process:</strong> Submit captured transactions for review and approval through the workflow system.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">3</span>
+                                    <strong>Verification & Approval:</strong> Review and verify submitted transactions before final processing.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">4</span>
+                                    <strong>Communication:</strong> Send confirmations and receipts to members and stakeholders.
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Best Practice:</strong> Monitor live notifications regularly to ensure timely processing of all transactions.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CIS Receipts -->
+                    <section id="cis-receipts" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-receipt"></i>
+                                CIS Receipts
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Collective Investment Scheme Receipt Processing</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Comprehensive receipt management for collective investment schemes including individual captures, 
+                                    bulk uploads, verification workflows, and member communications.</p>
+                                
+                                <div class="accordion" id="cisReceiptsAccordion">
+                                    <!-- Individual Reciept -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#cisIndividualReceipts">
+                                                <i class="fas fa-plus-circle me-2"></i>Individual Receipt Processing
+                                            </button>
+                                        </h2>
+                                        <div id="cisIndividualReceipts" class="accordion-collapse collapse" data-bs-parent="#cisReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-edit"></i><strong>Capture Receipt:</strong> Create new individual member receipts with payment details</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Receipt:</strong> Submit captured receipts for verification and processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bulk Reciept -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#cisBulkReceipts">
+                                                <i class="fas fa-cloud-upload-alt me-2"></i>Bulk Receipt Processing
+                                            </button>
+                                        </h2>
+                                        <div id="cisBulkReceipts" class="accordion-collapse collapse" data-bs-parent="#cisReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-upload"></i><strong>Upload Receipts:</strong> Bulk upload multiple receipts using CSV/Excel templates</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-check-double"></i><strong>Submit Uploads:</strong> Submit bulk uploaded receipts for batch processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Verifications -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#cisVerification">
+                                                <i class="fas fa-shield-alt me-2"></i>Verification & Communication
+                                            </button>
+                                        </h2>
+                                        <div id="cisVerification" class="accordion-collapse collapse" data-bs-parent="#cisReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-check-circle"></i><strong>Verify Receipts:</strong> Review and verify submitted receipts for accuracy</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-undo"></i><strong>Undo Verified Receipt:</strong> Reverse verification if corrections are needed</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-envelope"></i><strong>Email Receipts:</strong> Send receipt confirmations to members</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CIS Redemptions -->
+                    <section id="cis-redemptions" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                CIS Redemptions
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Collective Investment Scheme Redemption Management</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Process member redemption requests for collective investment schemes including individual applications 
+                                    and bulk upload capabilities with comprehensive approval workflows.</p>
+                                <div class="accordion" id="cisRedemptionsAccordion">
+                                    <!-- Individual Redemptions -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#cisIndividualRedemptions">
+                                                <i class="fas fa-user me-2"></i>Individual Redemption Processing
+                                            </button>
+                                        </h2>
+                                        <div id="cisIndividualRedemptions" class="accordion-collapse collapse" data-bs-parent="#cisRedemptionsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-file-alt"></i><strong>Redemption Request:</strong> Create new redemption applications for members</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Redemption:</strong> Submit redemption requests for approval and processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bulk Redemptions -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#cisBulkRedemptions">
+                                                <i class="fas fa-layer-group me-2"></i>Bulk Redemption Processing
+                                            </button>
+                                        </h2>
+                                        <div id="cisBulkRedemptions" class="accordion-collapse collapse" data-bs-parent="#cisRedemptionsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-upload"></i><strong>Upload Redemption Requests:</strong> Bulk upload multiple redemption applications</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-check-double"></i><strong>Submit Redemption Requests:</strong> Submit bulk redemptions for batch approval</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Asset Manager Receipts -->
+                    <section id="am-receipts" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                Asset Manager Receipts
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Asset Management Receipt Processing</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Handle asset manager receipts including individual captures, bulk processing, 
+                                    verification workflows, and member communication for asset management transactions.</p>
+                                <div class="accordion" id="amReceiptsAccordion">
+                                    <!-- Individual Processing -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#amIndividualReceipts">
+                                                <i class="fas fa-plus-circle me-2"></i>Individual Receipt Processing
+                                            </button>
+                                        </h2>
+                                        <div id="amIndividualReceipts" class="accordion-collapse collapse" data-bs-parent="#amReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-edit"></i><strong>Capture Receipt:</strong> Create new asset manager receipts with investment details</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Receipt:</strong> Submit captured receipts for verification process</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bulk Processing -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#amBulkReceipts">
+                                                <i class="fas fa-cloud-upload-alt me-2"></i>Bulk Receipt Processing
+                                            </button>
+                                        </h2>
+                                        <div id="amBulkReceipts" class="accordion-collapse collapse" data-bs-parent="#amReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-upload"></i><strong>Upload Receipts:</strong> Bulk upload asset manager receipts using templates</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-check-double"></i><strong>Submit Uploads:</strong> Submit bulk uploaded receipts for processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Verification & Communication -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#amVerification">
+                                                <i class="fas fa-shield-alt me-2"></i>Verification & Communication
+                                            </button>
+                                        </h2>
+                                        <div id="amVerification" class="accordion-collapse collapse" data-bs-parent="#amReceiptsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-check-circle"></i><strong>Verify Receipts:</strong> Review and verify submitted asset manager receipts</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-undo"></i><strong>Undo Verified Receipt:</strong> Reverse verification for corrections</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-envelope"></i><strong>Email Receipts:</strong> Send receipt confirmations to stakeholders</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Asset Manager Withdrawals -->
+                    <section id="am-withdrawals" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-money-bill-transfer"></i>
+                                Asset Manager Withdrawals
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Asset Manager Withdrawal Processing</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Process withdrawal requests for asset management clients including individual applications 
+                                    and comprehensive approval workflows to ensure proper authorization.</p>
+                                <div class="accordion" id="amWithdrawalsAccordion">
+                                    <!-- Individual Withdrawals -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#amIndividualWithdrawals">
+                                                <i class="fas fa-user me-2"></i>Individual Withdrawal Processing
+                                            </button>
+                                        </h2>
+                                        <div id="amIndividualWithdrawals" class="accordion-collapse collapse" data-bs-parent="#amWithdrawalsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-file-alt"></i><strong>Capture Withdrawal:</strong> Create new withdrawal applications for clients</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Withdrawal:</strong> Submit withdrawal requests for approval</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Approval Process -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#amWithdrawalApproval">
+                                                <i class="fas fa-check-circle me-2"></i>Withdrawal Approval
+                                            </button>
+                                        </h2>
+                                        <div id="amWithdrawalApproval" class="accordion-collapse collapse" data-bs-parent="#amWithdrawalsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-clipboard-check"></i><strong>Approve Withdrawals:</strong> Review and approve submitted withdrawal requests</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Provident Fund Contributions -->
+                    <section id="pf-contributions" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-piggy-bank"></i>
+                                Provident Fund Contributions
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Provident Fund Contribution Management</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Comprehensive contribution processing for provident fund members including individual captures, 
+                                    bulk uploads, verification workflows, and member communications.</p>
+                                <div class="accordion" id="pfContributionsAccordion">
+                                    <!-- Individual Processing -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#pfIndividualContributions">
+                                                <i class="fas fa-plus-circle me-2"></i>Individual Contribution Processing
+                                            </button>
+                                        </h2>
+                                        <div id="pfIndividualContributions" class="accordion-collapse collapse" data-bs-parent="#pfContributionsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-edit"></i><strong>Capture Contributions:</strong> Record individual member contributions and employer matches</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Contributions:</strong> Submit captured contributions for verification</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bulk Processing -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#pfBulkContributions">
+                                                <i class="fas fa-cloud-upload-alt me-2"></i>Bulk Contribution Processing
+                                            </button>
+                                        </h2>
+                                        <div id="pfBulkContributions" class="accordion-collapse collapse" data-bs-parent="#pfContributionsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-upload"></i><strong>Upload Contributions:</strong> Bulk upload member contributions using payroll files</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-check-double"></i><strong>Submit Uploads:</strong> Submit bulk contribution uploads for processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Verification & Communication -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#pfContributionVerification">
+                                                <i class="fas fa-shield-alt me-2"></i>Verification & Communication
+                                            </button>
+                                        </h2>
+                                        <div id="pfContributionVerification" class="accordion-collapse collapse" data-bs-parent="#pfContributionsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-check-circle"></i><strong>Verify Contributions:</strong> Review and verify submitted member contributions</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-undo"></i><strong>Undo Verified Contributions:</strong> Reverse verification for corrections</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-envelope"></i><strong>Email Contribution Receipts:</strong> Send contribution confirmations to members</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Provident Fund Withdrawals -->
+                    <section id="pf-withdrawals" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-university"></i>
+                                Provident Fund Withdrawals
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header module-section">
+                                <h6 class="mb-0">Provident Fund Withdrawal & Termination Processing</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Process member withdrawal and termination requests for provident fund schemes including 
+                                    individual applications, bulk processing, and comprehensive approval workflows.</p>
+                                <div class="accordion" id="pfWithdrawalsAccordion">
+                                    <!-- Individual Withdrawals -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#pfIndividualWithdrawals">
+                                                <i class="fas fa-user me-2"></i>Individual Withdrawal Processing
+                                            </button>
+                                        </h2>
+                                        <div id="pfIndividualWithdrawals" class="accordion-collapse collapse" data-bs-parent="#pfWithdrawalsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-file-alt"></i><strong>Withdrawal Requests:</strong> Create withdrawal and termination applications for members</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-paper-plane"></i><strong>Submit Withdrawal Requests:</strong> Submit requests for approval and processing</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bulk Processing -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#pfBulkWithdrawals">
+                                                <i class="fas fa-layer-group me-2"></i>Bulk Withdrawal Processing
+                                            </button>
+                                        </h2>
+                                        <div id="pfBulkWithdrawals" class="accordion-collapse collapse" data-bs-parent="#pfWithdrawalsAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="process-list">
+                                                    <li><i class="fas fa-upload"></i><strong>Upload Withdrawal Requests:</strong> Bulk upload multiple withdrawal applications</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                    <li><i class="fas fa-check-double"></i><strong>Confirm Withdrawal Requests Uploads:</strong> Submit bulk withdrawals for approval</li>
+                                                    <div style="max-width: 800px; margin: 0 auto;">
+                                                        <img src="images/currency.png" alt="#" style="width: 100%; height: auto;">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <button class="btn border-0 back-to-top" id="backToTop" name="backToTop" title="Back to Top">
+        <i class="fa-solid fa-circle-arrow-up fa-bounce text-success"></i>
+    </button>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

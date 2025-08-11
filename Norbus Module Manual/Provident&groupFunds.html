@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbus e-Purse - Provident Fund Administration Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+</head>
+
+<body class="bg-light">
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container-fluid manual-container">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <h4 class="mb-0"><i class="fas fa-money-bill-wave me-2"></i>Norbus e-Purse</h4>
+                        <small class="opacity-75">Fund Administration Manual</small>
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+                        <div class="nav-item">
+                            <a href="#overview" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                Module Overview
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#master-setups" class="nav-link">
+                                <i class="fas fa-cogs"></i>
+                                Master Setups
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#scheme-management" class="nav-link">
+                                <i class="fas fa-project-diagram"></i>
+                                Scheme Management
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#nav-management" class="nav-link">
+                                <i class="fas fa-chart-line"></i>
+                                NAV Management
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#transactions" class="nav-link">
+                                <i class="fas fa-exchange-alt"></i>
+                                Transactions
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#gain-distribution" class="nav-link">
+                                <i class="fas fa-share-alt"></i>
+                                Gain Distribution
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#unsubmitted-items" class="nav-link">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#authorizations" class="nav-link">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reversals" class="nav-link">
+                                <i class="fas fa-undo"></i>
+                                Reversals
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reversal-authorizations" class="nav-link">
+                                <i class="fas fa-check-double"></i>
+                                Reversal Authorizations
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <div class="main-content">
+                    <!-- Module Nav -->
+                    <nav class="nav">
+                        <div class="nav-item">
+                            <a href="generalSetups.html" class="module-link">GS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CRM.html" class="module-link">CRM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CIS.html" class="module-link">CIS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="assetManager.html" class="module-link">AM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="Provident&groupFunds.html" class="module-link active">PF</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="fundAccounting.html" class="module-link">FA</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="communication.html" class="module-link">S&E</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="reporting.html" class="module-link">Reporting</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="backOfficeCashier.html" class="module-link">BOC</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="teller.html" class="module-link">Teller</a>
+                        </div>
+                    </nav>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="position-relative">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-box" placeholder="Search the manual..." id="searchInput">
+                        </div>
+                    </div>
+                    <!-- System Overview -->
+                    <section id="overview" class="content-section fade-in">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-play-circle"></i>
+                                Provident and Groupn Funds Module Overview
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome to Norbus e-Purse Fund Administration Module</h5>
+                                <p class="card-text">The Fund Administration module is designed to manage provident fund operations, 
+                                    including scheme management, member administration, transaction processing, and NAV calculations. 
+                                    This comprehensive module handles all aspects of fund administration from setup to daily operations.
+                                </p>
+                                <p class="card-text">The Fund Administration module provides complete functionality for:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Master data setup and management</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Scheme configuration and administration</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>NAV computation and fee management</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Transaction processing and approvals</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Gain distribution and reconciliation</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Reversal management and authorizations</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Comprehensive audit trails</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Features Overview -->
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h6>Master Setups</h6>
+                                <p class="small text-muted">Configure administrators, fees, and core system parameters</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h6>Scheme Management</h6>
+                                <p class="small text-muted">Setup and manage fund schemes, banks, and member groups</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h6>NAV Operations</h6>
+                                <p class="small text-muted">Compute NAV and manage fee calculations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h6>Transactions</h6>
+                                <p class="small text-muted">Process purchases, transfers, and merges</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <h6>Gain Distribution</h6>
+                                <p class="small text-muted">Distribute gains and perform reconciliations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h6>Authorizations</h6>
+                                <p class="small text-muted">Approve transactions and system changes</p>
+                            </div>
+                        </div>
+                        <!-- Getting Started Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Getting Started with Fund Administration</h5>
+                                <div class="workflow-step">
+                                    <span class="step-number">1</span>
+                                    <strong>Master Setup:</strong> Configure administrators and fee structures before creating schemes.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">2</span>
+                                    <strong>Scheme Creation:</strong> Set up fund schemes with banks, member groups, and vesting rules.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">3</span>
+                                    <strong>NAV Management:</strong> Compute and approve NAV calculations regularly.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">4</span>
+                                    <strong>Transaction Processing:</strong> Handle member transactions through the approval workflow.
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Best Practice:</strong> Always follow the maker-checker approval process for all transactions.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Master Setups -->
+                    <section id="master-setups" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i>
+                                Master Setups
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Core Configuration Management</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="masterSetupsAccordion">
+                                    <!-- Administrator Management -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#administratorSetup">
+                                                <i class="fas fa-user-tie me-2"></i>Administrator Management
+                                            </button>
+                                        </h2>
+                                        <div id="administratorSetup" class="accordion-collapse collapse" data-bs-parent="#masterSetupsAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Administrator Management</strong> allows you to create and manage system administrators 
+                                                    who will oversee fund operations. Administrators have elevated privileges for system configuration 
+                                                    and oversight.</p>
+                                                <h6>Key Features:</h6>
+                                                <ul>
+                                                    <li><strong>New Administrator:</strong> Create new administrator accounts with specific roles and permissions</li>
+                                                    <li><strong>Search Administrator:</strong> Find and manage existing administrator accounts</li>
+                                                    <li><strong>Role Assignment:</strong> Assign specific administrative roles and access levels</li>
+                                                    <li><strong>Activity Monitoring:</strong> Track administrator activities and system access</li>
+                                                </ul>
+                                                <div class="alert alert-warning">
+                                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                                    <strong>Security Note:</strong> Administrator accounts should be created only for authorized personnel.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fee Management -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#feeSetup">
+                                                <i class="fas fa-dollar-sign me-2"></i>Fee Management
+                                            </button>
+                                        </h2>
+                                        <div id="feeSetup" class="accordion-collapse collapse" data-bs-parent="#masterSetupsAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Fee Management</strong> enables you to configure various fee structures that will be applied 
+                                                    to fund schemes. This includes management fees, performance fees, and transaction-based charges.</p>
+                                                <h6>Fee Configuration Options:</h6>
+                                                <ul>
+                                                    <li><strong>New Fee:</strong> Create new fee structures with specific parameters</li>
+                                                    <li><strong>Search Fees:</strong> View and modify existing fee configurations</li>
+                                                    <li><strong>Fee Types:</strong> Configure different types of fees (management, performance, transaction)</li>
+                                                    <li><strong>Calculation Methods:</strong> Set up percentage-based or fixed fee calculations</li>
+                                                </ul>
+                                                <div class="alert alert-info">
+                                                    <i class="fas fa-info-circle me-2"></i>
+                                                    <strong>Note:</strong> Fee structures must be configured before creating schemes that will use them.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Scheme Management -->
+                    <section id="scheme-management" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i>
+                                Scheme Management
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Fund Scheme Configuration</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="schemeAccordion">
+                                    <!-- Scheme Setup -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#schemeSetup">
+                                                <i class="fas fa-plus-circle me-2"></i>Scheme Setup
+                                            </button>
+                                        </h2>
+                                        <div id="schemeSetup" class="accordion-collapse collapse" data-bs-parent="#schemeAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Scheme Setup</strong> is the core functionality for creating and managing fund schemes. 
+                                                    Each scheme represents a distinct fund with its own investment strategy and member base.</p>
+                                                <h6>Scheme Management Features:</h6>
+                                                <ul>
+                                                    <li><strong>New Scheme:</strong> Create new fund schemes with comprehensive configuration</li>
+                                                    <li><strong>Search Schemes:</strong> Find and manage existing schemes</li>
+                                                    <li><strong>Scheme Parameters:</strong> Configure investment objectives, risk profiles, and operational rules</li>
+                                                    <li><strong>Member Enrollment:</strong> Set up member registration and onboarding processes</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Scheme Banks -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#schemeBanks">
+                                                <i class="fas fa-university me-2"></i>Scheme Banks
+                                            </button>
+                                        </h2>
+                                        <div id="schemeBanks" class="accordion-collapse collapse" data-bs-parent="#schemeAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Scheme Banks</strong> configuration allows you to assign banking relationships to specific schemes. 
+                                                    This determines where scheme funds are held and processed.</p>
+                                                <h6>Banking Configuration:</h6>
+                                                <ul>
+                                                    <li><strong>Bank Assignment:</strong> Link schemes to specific banking institutions</li>
+                                                    <li><strong>Account Setup:</strong> Configure bank accounts for scheme operations</li>
+                                                    <li><strong>Transaction Routing:</strong> Set up automatic routing of scheme transactions</li>
+                                                    <li><strong>Reconciliation Setup:</strong> Configure bank reconciliation parameters</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Additional Scheme Components -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#schemeComponents">
+                                                <i class="fas fa-layer-group me-2"></i>Additional Scheme Components
+                                            </button>
+                                        </h2>
+                                        <div id="schemeComponents" class="accordion-collapse collapse" data-bs-parent="#schemeAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Scheme Fee Configuration:</h6>
+                                                <p>Link previously configured fee structures to specific schemes.</p>
+                                                
+                                                <h6>Scheme Member Groups:</h6>
+                                                <p>Create member groups within schemes for differential treatment or reporting.</p>
+                                                
+                                                <h6>Scheme Upfront Charges:</h6>
+                                                <p>Configure one-time charges applied at the time of member enrollment or investment.</p>
+                                                
+                                                <h6>Scheme Vesting Rules:</h6>
+                                                <p>Set up vesting schedules that determine when members become entitled to employer contributions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- NAV Management -->
+                    <section id="nav-management" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i>
+                                NAV Management
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Net Asset Value Operations</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="navAccordion">
+                                    <!-- Compute NAV -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#computeNav">
+                                                <i class="fas fa-calculator me-2"></i>Compute NAV
+                                            </button>
+                                        </h2>
+                                        <div id="computeNav" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Compute NAV</strong> functionality calculates the Net Asset Value for fund schemes. 
+                                                    This is a critical daily operation that determines the value of member investments.</p>
+                                                <h6>NAV Computation Features:</h6>
+                                                <ul>
+                                                    <li><strong>Automated Calculation:</strong> System calculates NAV based on portfolio valuations</li>
+                                                    <li><strong>Valuation Sources:</strong> Integration with market data providers for accurate pricing</li>
+                                                    <li><strong>Multi-Scheme Support:</strong> Compute NAV for multiple schemes simultaneously</li>
+                                                    <li><strong>Historical Tracking:</strong> Maintain complete NAV history for reporting and analysis</li>
+                                                </ul>
+                                                <div class="alert alert-success">
+                                                    <i class="fas fa-clock me-2"></i>
+                                                    <strong>Best Practice:</strong> NAV should be computed daily after market close for accurate valuations.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Post NAV Fees -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#postNavFees">
+                                                <i class="fas fa-receipt me-2"></i>Post NAV Fees
+                                            </button>
+                                        </h2>
+                                        <div id="postNavFees" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Post NAV Fees</strong> applies the configured fee structures to schemes after NAV computation. 
+                                                    This ensures accurate fee calculations based on current asset values.</p>
+                                                <h6>Fee Posting Process:</h6>
+                                                <ul>
+                                                    <li><strong>Automatic Application:</strong> Fees are applied based on pre-configured rules</li>
+                                                    <li><strong>Fee Accrual:</strong> System handles daily accrual of management fees</li>
+                                                    <li><strong>Performance Fees:</strong> Calculate and apply performance-based fees when applicable</li>
+                                                    <li><strong>Fee Reconciliation:</strong> Ensure accuracy through automated reconciliation processes</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Transactions -->
+                    <section id="transactions" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-exchange-alt"></i>
+                                Transactions
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Member Transaction Processing</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="transactionsAccordion">
+                                    <!-- Purchase Transactions -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#purchaseTransactions">
+                                                <i class="fas fa-shopping-cart me-2"></i>Purchase Transactions
+                                            </button>
+                                        </h2>
+                                        <div id="purchaseTransactions" class="accordion-collapse collapse" data-bs-parent="#transactionsAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Purchase Transactions</strong> handle member contributions and investments into fund schemes. 
+                                                    This includes both regular contributions and ad-hoc investments.</p>
+                                                <h6>Purchase Processing:</h6>
+                                                <ul>
+                                                    <li><strong>Receipt Processing:</strong> Handle incoming member contributions</li>
+                                                    <li><strong>Unit Allocation:</strong> Calculate units based on current NAV</li>
+                                                    <li><strong>Contribution Types:</strong> Support for regular and voluntary contributions</li>
+                                                    <li><strong>Automatic Processing:</strong> Streamlined workflow for routine contributions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Transfer Applications -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#transferApplications">
+                                                <i class="fas fa-exchange-alt me-2"></i>Transfer Applications
+                                            </button>
+                                        </h2>
+                                        <div id="transferApplications" class="accordion-collapse collapse" data-bs-parent="#transactionsAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Transfer Applications</strong> facilitate the movement of member funds between different schemes 
+                                                    or to external providers while maintaining compliance with regulations.</p>
+                                                <h6>Transfer Features:</h6>
+                                                <ul>
+                                                    <li><strong>Inter-Scheme Transfers:</strong> Move funds between schemes within the system</li>
+                                                    <li><strong>External Transfers:</strong> Process transfers to external fund managers</li>
+                                                    <li><strong>Partial/Full Transfers:</strong> Support for both partial and complete fund transfers</li>
+                                                    <li><strong>Compliance Checks:</strong> Automated validation of transfer eligibility</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Additional Transaction Types -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#additionalTransactions">
+                                                <i class="fas fa-tasks me-2"></i>Additional Transaction Types
+                                            </button>
+                                        </h2>
+                                        <div id="additionalTransactions" class="accordion-collapse collapse" data-bs-parent="#transactionsAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Merge Applications:</h6>
+                                                <p>Combine multiple member accounts or consolidate investments for administrative efficiency.</p>
+                                                
+                                                <h6>Transaction Uploads (Migration):</h6>
+                                                <p>Bulk upload functionality for migrating historical transactions from legacy systems or 
+                                                    processing large batches of transactions efficiently.</p>
+                                                
+                                                <div class="alert alert-info">
+                                                    <i class="fas fa-upload me-2"></i>
+                                                    <strong>Migration Note:</strong> Use transaction uploads for one-time data migration or bulk processing scenarios.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Gain Distribution -->
+                    <section id="gain-distribution" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-share-alt"></i>
+                                Gain Distribution
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Investment Gain Management</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="gainDistributionAccordion">
+                                    <!-- Distribute Gains -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#distributeGains">
+                                                <i class="fas fa-share me-2"></i>Distribute Gains
+                                            </button>
+                                        </h2>
+                                        <div id="distributeGains" class="accordion-collapse collapse" data-bs-parent="#gainDistributionAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Distribute Gains</strong> manages the allocation of investment gains to member accounts 
+                                                    based on their holdings and the scheme's distribution policy.</p>
+                                                <h6>Distribution Features:</h6>
+                                                <ul>
+                                                    <li><strong>Automated Distribution:</strong> Calculate and distribute gains based on member holdings</li>
+                                                    <li><strong>Distribution Policies:</strong> Apply scheme-specific distribution rules and schedules</li>
+                                                    <li><strong>Pro-Rata Allocation:</strong> Ensure fair distribution based on member investment ratios</li>
+                                                    <li><strong>Tax Considerations:</strong> Handle tax implications of gain distributions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Gain Reconciliation -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#gainReconciliation">
+                                                <i class="fas fa-balance-scale me-2"></i>Gain Reconciliation
+                                            </button>
+                                        </h2>
+                                        <div id="gainReconciliation" class="accordion-collapse collapse" data-bs-parent="#gainDistributionAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Gain Reconciliation</strong> ensures accuracy in gain calculations and distributions 
+                                                    by comparing system calculations with external sources and identifying discrepancies.</p>
+                                                <h6>Reconciliation Process:</h6>
+                                                <ul>
+                                                    <li><strong>Automated Matching:</strong> Compare internal calculations with external data sources</li>
+                                                    <li><strong>Discrepancy Reporting:</strong> Identify and report any calculation differences</li>
+                                                    <li><strong>Audit Trail:</strong> Maintain detailed records of all reconciliation activities</li>
+                                                    <li><strong>Correction Workflow:</strong> Process to handle and approve reconciliation adjustments</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Unsubmitted Items -->
+                    <section id="unsubmitted-items" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Submission Queue</h5>
+                                <p class="card-text">All items that have been created or modified but not yet submitted for approval 
+                                    are listed here. This ensures no incomplete work is lost and provides a clear workflow for processing.</p>
+                                <div class="accordion" id="unsubmittedAccordion">
+                                    <!-- Master Setups Pending -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#masterSetupsPending">
+                                                <i class="fas fa-cogs me-2"></i>Master Setups Pending Submission
+                                            </button>
+                                        </h2>
+                                        <div id="masterSetupsPending" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>Administrator and fee configurations that have been created or modified but not submitted for approval.</p>
+                                                <ul>
+                                                    <li>New administrator accounts awaiting submission</li>
+                                                    <li>Modified administrator details pending review</li>
+                                                    <li>Fee structure changes not yet submitted</li>
+                                                    <li>New fee configurations in draft status</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Scheme Related Pending -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#schemeRelatedPending">
+                                                <i class="fas fa-project-diagram me-2"></i>Scheme Related Setups
+                                            </button>
+                                        </h2>
+                                        <div id="schemeRelatedPending" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All scheme-related configurations that are pending submission for approval.</p>
+                                                <ul>
+                                                    <li>New scheme setups in draft status</li>
+                                                    <li>Scheme bank assignments pending approval</li>
+                                                    <li>Member group configurations awaiting submission</li>
+                                                    <li>Vesting rule modifications not yet submitted</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Other Pending Items -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#otherPendingItems">
+                                                <i class="fas fa-list me-2"></i>Transactions & NAVs Pending
+                                            </button>
+                                        </h2>
+                                        <div id="otherPendingItems" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Transactions Pending Submission:</h6>
+                                                <p>Member transactions that have been processed but not submitted for final approval.</p>
+                                                
+                                                <h6>NAVs Pending Submission:</h6>
+                                                <p>Computed NAV calculations that are awaiting submission for approval and publication.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Authorizations -->
+                    <section id="authorizations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Approval Workflow Management</h5>
+                                <p class="card-text">All submitted items requiring approval are managed through this comprehensive authorization system, 
+                                    ensuring proper oversight and compliance with organizational policies.</p>
+                                <div class="accordion" id="authorizationsAccordion">
+                                    <!-- Masters Setups Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#mastersSetupsAuth">
+                                                <i class="fas fa-user-check me-2"></i>Masters Setups
+                                            </button>
+                                        </h2>
+                                        <div id="mastersSetupsAuth" class="accordion-collapse collapse" data-bs-parent="#authorizationsAccordion">
+                                            <div class="accordion-body">
+                                                <p>Approve or reject administrator and fee setup changes that have been submitted for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Scheme Setups Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#schemeSetupsAuth">
+                                                <i class="fas fa-project-diagram me-2"></i>Scheme Setups
+                                            </button>
+                                        </h2>
+                                        <div id="schemeSetupsAuth" class="accordion-collapse collapse" data-bs-parent="#authorizationsAccordion">
+                                            <div class="accordion-body">
+                                                <p>Review and approve scheme-related configurations including banks, member groups, and vesting rules.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Transaction Authorizations -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#transactionAuth">
+                                                <i class="fas fa-exchange-alt me-2"></i>Transactions & Operations
+                                            </button>
+                                        </h2>
+                                        <div id="transactionAuth" class="accordion-collapse collapse" data-bs-parent="#authorizationsAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Available Authorization Categories:</h6>
+                                                <ul>
+                                                    <li><strong>Transactions:</strong> Purchase, transfer, and merge applications</li>
+                                                    <li><strong>NAVs:</strong> Computed NAV calculations requiring approval</li>
+                                                    <li><strong>Distributed Gains:</strong> Gain distribution calculations and allocations</li>
+                                                    <li><strong>Withdrawals:</strong> Member withdrawal and termination requests</li>
+                                                    <li><strong>Transaction Uploads:</strong> Bulk transaction migration data</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Reversals -->
+                    <section id="reversals" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-undo"></i>
+                                Reversals
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Transaction Reversal Management</h5>
+                                <p class="card-text">Handle the reversal of approved transactions when corrections or cancellations are required. 
+                                    All reversals follow a controlled approval process to maintain system integrity.</p>
+                                <div class="accordion" id="reversalsAccordion">
+                                    <!-- Transaction Reversals -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#transactionReversals">
+                                                <i class="fas fa-undo-alt me-2"></i>Transaction Reversals
+                                            </button>
+                                        </h2>
+                                        <div id="transactionReversals" class="accordion-collapse collapse" data-bs-parent="#reversalsAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Available Reversal Types:</h6>
+                                                <ul>
+                                                    <li><strong>Reverse Purchase:</strong> Cancel purchase transactions and restore previous balances</li>
+                                                    <li><strong>Reverse Transfers:</strong> Undo transfer transactions between schemes or external parties</li>
+                                                    <li><strong>Reverse Merge:</strong> Separate previously merged accounts or investments</li>
+                                                    <li><strong>Reverse Withdrawal/Termination:</strong> Cancel withdrawal requests and restore member status</li>
+                                                </ul>
+                                                <div class="alert alert-warning">
+                                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                                    <strong>Important:</strong> All reversals require proper authorization and documentation.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- System Operation Reversals -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#systemReversals">
+                                                <i class="fas fa-cog me-2"></i>System Operation Reversals
+                                            </button>
+                                        </h2>
+                                        <div id="systemReversals" class="accordion-collapse collapse" data-bs-parent="#reversalsAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Critical System Reversals:</h6>
+                                                <ul>
+                                                    <li><strong>Reverse NAV:</strong> Cancel NAV calculations when errors are detected</li>
+                                                    <li><strong>Reverse Distributed Gains:</strong> Undo gain distribution calculations and member allocations</li>
+                                                </ul>
+                                                <div class="alert alert-danger">
+                                                    <i class="fas fa-exclamation-circle me-2"></i>
+                                                    <strong>Caution:</strong> NAV and gain distribution reversals affect multiple members and require senior approval.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Reversal Authorizations -->
+                    <section id="reversal-authorizations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-double"></i>
+                                Reversal Authorizations
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Reversal Approval Management</h5>
+                                <p class="card-text">All reversal requests must be approved through this authorization workflow to ensure 
+                                    proper oversight and prevent unauthorized system changes.</p>
+                                <div class="accordion" id="reversalAuthAccordion">
+                                    <!-- Reversal Categories -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#reversalCategories">
+                                                <i class="fas fa-list-check me-2"></i>Authorization Categories
+                                            </button>
+                                        </h2>
+                                        <div id="reversalCategories" class="accordion-collapse collapse" data-bs-parent="#reversalAuthAccordion">
+                                            <div class="accordion-body">
+                                                <h6>Transaction Reversal Approvals:</h6>
+                                                <ul>
+                                                    <li><strong>Purchases:</strong> Approve reversal of purchase transactions</li>
+                                                    <li><strong>Transfers:</strong> Authorize reversal of transfer operations</li>
+                                                    <li><strong>Merge:</strong> Approve account merge reversal requests</li>
+                                                    <li><strong>Withdrawals/Terminations:</strong> Authorize cancellation of withdrawal requests</li>
+                                                </ul>
+                                                
+                                                <h6>System Operation Reversal Approvals:</h6>
+                                                <ul>
+                                                    <li><strong>NAV:</strong> Authorize reversal of NAV calculations</li>
+                                                    <li><strong>Distributed Gains:</strong> Approve reversal of gain distributions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Note:</strong> Reversal authorizations require detailed justification and senior management approval for system integrity.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <button class="btn border-0 back-to-top" id="backToTop" name="backToTop" title="Back to Top">
+        <i class="fa-solid fa-circle-arrow-up fa-bounce text-success"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -17,7 +17,6 @@ backToTop.addEventListener("click", () => {
   });
 });
 
-
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -44,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
 
     // Progress bar functionality
     function updateProgressBar() {

@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbus e-Purse Mutual Fund System - User Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+</head>
+
+<body class="bg-light">
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container-fluid manual-container">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <h4 class="mb-0"><i class="fas fa-wallet me-2"></i>Norbus e-Purse</h4>
+                        <small class="opacity-75">Mutual Fund / CIS Module</small>
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+                        <div class="nav-item">
+                            <a href="#overview" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                Module Overview
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#master-setups" class="nav-link">
+                                <i class="fas fa-cogs"></i>
+                                Master Setups
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#cis-products" class="nav-link">
+                                <i class="fas fa-money-bill-wave"></i>
+                                CIS Products
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#umbrella-structure" class="nav-link">
+                                <i class="fas fa-sitemap"></i>
+                                Umbrella & Sub Structure
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#internal-controls" class="nav-link">
+                                <i class="fas fa-shield-alt"></i>
+                                Internal Controls
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#nav-operations" class="nav-link">
+                                <i class="fas fa-calculator"></i>
+                                NAV Operations
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#transactions" class="nav-link">
+                                <i class="fas fa-exchange-alt"></i>
+                                Transactions
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reconciliation" class="nav-link">
+                                <i class="fas fa-balance-scale"></i>
+                                Reconciliation
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#fund-distribution" class="nav-link">
+                                <i class="fas fa-share-alt"></i>
+                                Fund Distribution
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#unsubmitted-items" class="nav-link">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#authorizations" class="nav-link">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reversals" class="nav-link">
+                                <i class="fas fa-undo"></i>
+                                Reversals
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#reversal-authorization" class="nav-link">
+                                <i class="fas fa-file-alt"></i>
+                                Reversal Authorization
+                            </a>
+                        <div class="nav-item">
+                            <a href="#troubleshooting" class="nav-link">
+                                <i class="fas fa-wrench"></i>
+                                Troubleshooting
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <div class="main-content">
+                    <!-- Module Nav -->
+                    <nav class="nav">
+                        <div class="nav-item">
+                            <a href="generalSetups.html" class="module-link ">GS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CRM.html" class="module-link">CRM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CIS.html" class="module-link active">CIS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="assetManager.html" class="module-link ">AM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="Provident&groupFunds.html" class="module-link">PF</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="fundAccounting.html" class="module-link">FA</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="communication.html" class="module-link">S&E</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="reporting.html" class="module-link">Reporting</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="backOfficeCashier.html" class="module-link">BOC</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="teller.html" class="module-link">Teller</a>
+                        </div>
+                    </nav>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="position-relative">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-box" placeholder="Search the MF system manual..." id="searchInput">
+                        </div>
+                    </div>
+                    <!-- System Overview -->
+                    <section id="overview" class="content-section fade-in">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-home"></i>
+                                Mutual Fund Module Overview
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome to Norbus e-Purse Mutual Fund Module</h5>
+                                <p class="card-text">The Mutual Fund (MF) system is a comprehensive platform designed to manage collective investment schemes, fund operations, and investor services within the Norbus e-Purse ecosystem. This system provides end-to-end fund management capabilities from setup to daily operations.</p>
+                            
+                                <p class="card-text">The MF module handles all fund-related operations including:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Fund Setup and Configuration</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Net Asset Value (NAV) Calculation</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Purchase and Redemption Processing</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Fund Distribution Management</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Reconciliation and Reporting</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Multi-level Authorization Workflow</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Real-time Notifications and Alerts</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Features Overview -->
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h6>Master Setups</h6>
+                                <p class="small text-muted">Configure fund types, unit classes, and system parameters</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <h6>CIS Products</h6>
+                                <p class="small text-muted">Create and manage collective investment schemes</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h6>Umbrella Structure</h6>
+                                <p class="small text-muted">Manage umbrella funds and sub-fund structures</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h6>NAV Processing</h6>
+                                <p class="small text-muted">Calculate and manage net asset values</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h6>Transactions</h6>
+                                <p class="small text-muted">Process transfers, switches, and mergers</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h6>Fund Distribution</h6>
+                                <p class="small text-muted">Manage dividend and income distributions</p>
+                            </div>
+                        </div>
+                        <!-- Getting Started Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">System Access Requirements</h5>
+                                <div class="workflow-step">
+                                    <span class="step-number">1</span>
+                                    <strong>Login Credentials:</strong> Ensure you have valid username and password provided by your system administrator.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">2</span>
+                                    <strong>Browser Requirements:</strong> Use a modern web browser (Chrome, Firefox, Safari, Edge) with JavaScript enabled.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">3</span>
+                                    <strong>Network Access:</strong> Ensure stable internet connection and access to the organization's network.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">4</span>
+                                    <strong>User Permissions:</strong> Your access level determines which features are available to you.
+                                </div>
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Security Note:</strong> Always log out when finished and never share your login credentials.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation Structure -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Main Navigation Structure</h5>
+                                <div class="menu-hierarchy">
+                                    <div class="menu-path">Home → MF Dashboard</div><br>
+                                    <div class="menu-path">Master Setups → Fund Types</div><br>
+                                    <div class="menu-path">CIS Products → CIS Setup</div><br>
+                                    <div class="menu-path">NAV → Run NAV</div><br>
+                                    <div class="menu-path">Transactions → Transfer Application</div><br>
+                                    <div class="menu-path">Authorizations → Purchase</div><br>
+                                    <div class="menu-path">Reversals → Reverse Purchase</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Master Setups -->
+                    <section id="master-setups" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i>
+                                Master Setups
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Fund Configuration</h5>
+                                <p class="card-text">Set up and manage the foundational parameters for mutual funds including 
+                                    fund types, unit classes, and system-wide settings.
+                                </p>
+                                <div class="accordion" id="masterSetupAccordion">
+                                    <!-- Fund Types -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fundTypes">
+                                                <i class="fas fa-layer-group me-2"></i>Fund Types
+                                            </button>
+                                        </h2>
+                                        <div id="fundTypes" class="accordion-collapse collapse" data-bs-parent="#masterSetupAccordion">
+                                            <div class="accordion-body">
+                                                <p>Fund types define the investment strategies and asset classes for mutual funds. 
+                                                    You can create, edit, or delete fund types as needed.
+                                                </p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fundTypes.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>set up new fund type</strong> allows you to add a new fund type.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fundTypes2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Unit Classes -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unitClasses">
+                                                <i class="fas fa-tags me-2"></i>Unit / Share Classes
+                                            </button>
+                                        </h2>
+                                        <div id="unitClasses" class="accordion-collapse collapse" data-bs-parent="#masterSetupAccordion">
+                                            <div class="accordion-body">
+                                                <p>Unit classes define the different share classes available for funds, each with its own fee structure and investor eligibility.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/unitClasses.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>set up new unit class</strong> allows you to create a new unit class.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/unitClasses2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CIS Products -->
+                    <section id="cis-products" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-money-bill-wave"></i>
+                                CIS Products
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Collective Investment Schemes</h5>
+                                <p class="card-text">Manage collective investment schemes (CIS) including fund setup, configuration, and product
+                                    management.
+                                </p>
+                                <div class="mt-3">
+                                    <h6>CIS Configuration Components</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-2"></i>Fund Basic Information and Objectives</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Investment Strategy and Asset Allocation</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Fee Structure and Load Configuration</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Risk Profile and Investor Suitability</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Regulatory Compliance Parameters</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Distribution and Marketing Settings</li>
+                                    </ul>
+                                </div>
+                                <div class="accordion" id="cisAccordion">
+                                    <!-- CIS Setup -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#cisSetup">
+                                                <i class="fas fa-plus-circle fa-2x text-primary mb-2"></i>
+                                                <h6>CIS Setup</h6>
+                                                <p class="small text-muted">Create new collective investment schemes with complete fund
+                                                    configuration</p>
+                                            </button>
+                                        </h2>
+                                        <div id="cisSetup" class="accordion-collapse collapse" data-bs-parent="#cisAccordion">
+                                            <div class="accordion-body">
+                                                <p>Set up new collective investment schemes with detailed fund parameters, investment
+                                                    objectives, and compliance requirements.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/cisSetup.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>set up new CIS</strong> allows you to create a new collective investment
+                                                    scheme.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/cisSetup2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Search CIS Products -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#searchCIS">
+                                                <i class="fas fa-search fa-2x text-success mb-2"></i>
+                                                <h6>Search CIS Products</h6>
+                                                <p class="small text-muted">Advanced search and filtering for existing fund products</p>
+                                            </button>
+                                        </h2>
+                                        <div id="searchCIS" class="accordion-collapse collapse" data-bs-parent="#cisAccordion">
+                                            <div class="accordion-body">
+                                                <p>Utilize the search functionality to quickly find existing collective investment schemes based
+                                                    on various criteria such as fund type, unit class, and investment strategy.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/cisSearch.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>search CIS products</strong> opens the search interface.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/cisSearch2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Umbrella Structure -->
+                    <section id="umbrella-structure" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-sitemap"></i>
+                                Umbrella & Sub Structure
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Umbrella Fund Architecture</h5>
+                                <p class="card-text">Manage complex fund structures with umbrella funds containing multiple sub-funds, enabling efficient portfolio management and cost sharing.</p>
+                                <div class="accordion" id="umbrellaAccordion">
+                                    <!-- New Umbrella CIS -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newUmbrella">
+                                                <i class="fas fa-plus-circle me-2"></i>New Umbrella CIS
+                                            </button>
+                                        </h2>
+                                        <div id="newUmbrella" class="accordion-collapse collapse" data-bs-parent="#umbrellaAccordion">
+                                            <div class="accordion-body">
+                                                <p>Create new umbrella fund structures to group multiple sub-funds under a single umbrella, allowing for shared services and cost efficiencies.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrellaSetup.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Umbrella Management -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#umbrellaManagement">
+                                                <i class="fas fa-tools me-2"></i>Umbrella & Sub Structure
+                                            </button>
+                                        </h2>
+                                        <div id="umbrellaManagement" class="accordion-collapse collapse" data-bs-parent="#umbrellaAccordion">
+                                            <div class="accordion-body">
+                                                <p>Manage existing umbrella and sub-fund structures, including modifications to configurations, performance monitoring, and compliance checks.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrellaManagement.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>set up main fund</strong> allows you to setup a fund as a main fund.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrellaSetup2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <P>Clicking on <strong>Edit</strong> allows you to edit an umbrella fund.</P>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrellaEdit.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <P>Clicking on <strong>constituent</strong> allows you to view and delete sub funds of a main fund.</P>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrellaConstituent.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                Manage existing umbrella and sub-fund structures, modify configurations, and monitor performance across the entire fund family.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Internal Controls -->
+                    <section id="internal-controls" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-shield-alt"></i>
+                                Internal Controls
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Control Parameters</h5>
+                                <p class="card-text">Establish and manage internal controls to ensure compliance limit and cut-off amounts for operational efficiency within mutual fund operations.</p>
+                                <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-2"></i>Maximum deposit amounts per transaction</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Daily cut-off times for purchases and redemptions</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Transaction limits</li>
+                                    </ul>
+                                <div class="accordion" id="internalControlsAccordion">
+                                    <!-- Deposit Thresholds -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#depositThresholds">
+                                                <i class="fas fa-sliders-h fa-2x feature-icon mb-2"></i>
+                                                <h6>Thresholds</h6>
+                                                <p class="small text-muted">Configure maximum Deposit limits, Transaction limits and cut-off times for transactions</p>
+                                            </button>
+                                        </h2>
+                                        <div id="depositThresholds" class="accordion-collapse show" data-bs-parent="#internalControlsAccordion">
+                                            <div class="accordion-body">
+                                                <p>Configure maximum deposit limits and cut-off times for transactions to ensure compliance with fund policies.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/depositThresholds.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>edit</strong> allows you to configure deposit limits.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/depositThresholds2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- NAV Operations -->
+                    <section id="nav-operations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i>
+                                NAV Operations
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Net Asset Value Processing</h5>
+                                <p class="card-text">Daily calculation and management of fund Net Asset Values, including fee processing and performance tracking.</p>
+                                <div class="accordion" id="navAccordion">
+                                    <!-- Run NAV -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#runNav">
+                                                <i class="fas fa-calculator fa-2x feature-icon mb-2"></i>
+                                                <h6>Run NAV</h6>
+                                                <p class="small text-muted">Calculate daily net asset values for all funds</p>
+                                            </button>
+                                        </h2>
+                                        <div id="runNav" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                            <div class="accordion-body">
+                                                <p>Run daily NAV calculations for all funds, ensuring accurate pricing and performance tracking.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/runNav.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>run NAV</strong> allows you to initiate the NAV calculation process.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/runNav2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Post NAV Fees -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#postNavFees">
+                                                <i class="fas fa-file-invoice-dollar fa-2x text-success mb-2"></i>
+                                                <h6>Post NAV Fees</h6>
+                                                <p class="small text-muted">Process management and performance fees</p>
+                                            </button>
+                                        </h2>
+                                        <div id="postNavFees" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                            <div class="accordion-body">
+                                                <p>Process management and performance fees after NAV calculations, ensuring accurate fee deductions and investor account updates.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/postNavFees.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>post NAV fees</strong> allows you to process fees for the calculated NAV.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/postNavFees2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NAV Calculation Components -->
+                                <div class="mt-3">
+                                    <h6>NAV Calculation Components</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="workflow-step">
+                                                <span class="step-number">1</span>
+                                                <strong>Asset Valuation</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="workflow-step">
+                                                <span class="step-number">2</span>
+                                                <strong>Liability Calculation</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="workflow-step">
+                                                <span class="step-number">3</span>
+                                                <strong>Unit Reconciliation</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="workflow-step">
+                                                <span class="step-number">4</span>
+                                                <strong>Fee Processing</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Transactions -->
+                    <section id="transactions" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-exchange-alt"></i>
+                                Transactions
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Investor Transactions</h5>
+                                <p class="card-text">Manage investor transactions including purchases, redemptions, and transfers with comprehensive tracking and validation.</p>
+                                <div class="accordion" id="transactionAccordion">
+                                    <!--Transfer-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#transferTransaction">
+                                                <i class="fas fa-people-arrows fa-2x feature-icon mb-2"></i>
+                                                <h6>Transfer</h6>
+                                                <p class="small text-muted">Move units between investor accounts</p>
+                                            </button>
+                                        </h2>
+                                        <div id="transferTransaction" class="accordion-collapse collapse" data-bs-parent="#transactionAccordion">
+                                            <div class="accordion-body">
+                                                <p>Process transfers of units between investor accounts with complete audit trails and validation checks.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transferTransaction.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>transfer</strong> allows you to initiate a transfer transaction.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transferTransaction2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Switch-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#switchTransaction">
+                                                <i class="fas fa-random fa-2x feature-icon mb-2"></i>
+                                                <h6>Switch</h6>
+                                                <p class="small text-muted">Exchange units between different funds</p>
+                                            </button>
+                                        </h2>
+                                        <div id="switchTransaction" class="accordion-collapse collapse" data-bs-parent="#transactionAccordion">
+                                            <div class="accordion-body">
+                                                <p>Facilitate unit exchanges between different funds for investors, ensuring compliance with fund rules and validation checks.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/switchTransaction.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>switch</strong> allows you to initiate a switch transaction.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/switchTransaction2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Merge-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#mergeTransaction">
+                                                <i class="fas fa-object-group fa-2x feature-icon mb-2"></i>
+                                                <h6>Merge</h6>
+                                                <p class="small text-muted">Combine multiple investor accounts</p>
+                                            </button>
+                                        </h2>
+                                        <div id="mergeTransaction" class="accordion-collapse collapse" data-bs-parent="#transactionAccordion">
+                                            <div class="accordion-body">
+                                                <p>Merge multiple investor accounts into a single account, ensuring all transactions are properly recorded and validated.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/mergeTransaction.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>merge</strong> allows you to initiate a merge transaction.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/mergeTransaction2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <!-- Reconciliation -->
+                    <section id="reconciliation" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i>
+                                Reconciliation
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Daily Reconciliation Processes</h5>
+                                <p class="card-text">Ensure accuracy and completeness of all transactions through systematic reconciliation of purchases, receipts, and bank balances.</p>
+                                <div class="accordion" id="reconciliationAccordion">
+                                    <!-- Purchase Reconciliation -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#purchaseReconciliation">
+                                                <i class="fas fa-shopping-cart fa-2x text-primary mb-2"></i>
+                                                <h6>Purchase Reconciliation</h6>
+                                                <p class="small text-muted">Match purchase applications with received funds</p>
+                                            </button>
+                                        </h2>
+                                        <div id="purchaseReconciliation" class="accordion-collapse collapse" data-bs-parent="#reconciliationAccordion">
+                                            <div class="accordion-body">
+                                                <p>Reconcile purchase applications against received funds to ensure all transactions are accurately recorded.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchaseReconciliation.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>purchase reconciliation</strong> allows you to initiate the reconciliation process for purchases.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchaseReconciliation2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Receipt Reconciliation -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#receiptReconciliation">
+                                                <i class="fas fa-receipt fa-2x feature-icon mb-2"></i>
+                                                <h6>Receipt Reconciliation</h6>
+                                                <p class="small text-muted">Verify receipt of investor payments</p>
+                                            </button>
+                                        </h2>
+                                        <div id="receiptReconciliation" class="accordion-collapse collapse" data-bs-parent="#reconciliationAccordion">
+                                            <div class="accordion-body">
+                                                <p>Verify that all investor payments have been received and reconciled against system records.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/receiptReconciliation.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>receipt reconciliation</strong> allows you to initiate the reconciliation process for receipts.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/receiptReconciliation2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Bank Reconciliation -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#bankReconciliation">
+                                                <i class="fas fa-university fa-2x feature-icon mb-2"></i>
+                                                <h6>Bank Reconciliation</h6>
+                                                <p class="small text-muted">Match system records with bank statements</p>
+                                            </button>
+                                        </h2>
+                                        <div id="bankReconciliation" class="accordion-collapse collapse" data-bs-parent="#reconciliationAccordion">
+                                            <div class="accordion-body">
+                                                <p>Reconcile system records with bank statements to ensure all transactions are accurately reflected in financial records.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/bankReconciliation.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>bank reconciliation</strong> allows you to initiate the reconciliation process for bank transactions.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/bankReconciliation2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-warning mt-3">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                <strong>Daily Requirement:</strong> All reconciliations must be completed before end of business day to ensure
+                                accurate NAV calculations.
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Fund Distribution -->
+                    <section id="fund-distribution" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-share-alt"></i>
+                                Fund Distribution
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Dividend and Income Distribution</h5>
+                                <p class="card-text">Process fund distributions to investors including dividends, capital gains, and other income allocations according to fund policies.</p>
+                                <div class="accordion" id="distributionAccordion">
+                                    <!-- Dividend Distribution -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button  d-flex flex-column align-items-center text-center" type="button" data-bs-toggle="collapse" data-bs-target="#dividendDistribution">
+                                                <i class="fas fa-hand-holding-usd fa-2x feature-icon mb-2"></i>
+                                                <h6>Process Fund Distribution</h6>
+                                                <p class="small text-muted">Calculate and process distributions to investors</p>
+                                            </button>
+                                        </h2>
+                                        <div id="dividendDistribution" class="accordion-collapse show" data-bs-parent="#distributionAccordion">
+                                            <div class="accordion-body">
+                                                <p>Process regular income distributions to investors based on fund performance and policies.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/dividendDistribution.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on <strong>distribute dividends</strong> allows you to initiate the dividend distribution process.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/dividendDistribution2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Unsubmitted Items -->
+                    <section id="unsubmitted-items" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-hourglass-half"></i>
+                                Unsubmitted Items
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Items for Review</h5>
+                                <p class="card-text">All changes or updates that were saved without ticking the <strong>submit to checker</strong> 
+                                    button will be pending submission here.
+                                </p>
+                                <p>All changes made will remain in the Unsubmitted items list Until  <strong>sumbmitted to Checker</strong></p>
+                                <div class="accordion" id="unsubmittedAccordion">
+
+                                    <!-- Master Setup unsubmitted -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unsubmittedItemsMasterSetup">
+                                                <i class="fas fa-server fa-fw me-2"></i>Master Setup Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="unsubmittedItemsMasterSetup" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All master setups that were saved without ticking the submit to checker button will be pending submission here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/master setup unsubmitted items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the unsubmitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/master setup unsubmitted items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Submit</strong> button allows you to submit the unsubmitted item for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CIS Product Setup unsubmitted -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unsubmittedItemsCisProductSetup">
+                                                <i class="fas fa-users fa-fw me-2"></i>CIS Product Setup Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="unsubmittedItemsCisProductSetup" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All CIS setups that were saved without ticking the submit to checker button will be pending submission here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/CIS product unsubmitted items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the unsubmitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/CIS product unsubmitted items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Submit</strong> button allows you to submit the unsubmitted item for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Umbrella CIS Setup Unsubmitted-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unsubmittedItemsUmbrellaCisSetup">
+                                                <i class="fas fa-umbrella fa-fw me-2"></i>Umbrella CIS Setup Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="unsubmittedItemsUmbrellaCisSetup" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All umbrella CIS setups that were saved without ticking the submit to checker button will be pending submission here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrella CIS unsubmitted items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the unsubmitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/umbrella CIS unsubmitted items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Submit</strong> button allows you to submit the unsubmitted item for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--NAV Unsubmitted-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unsubmittedItemsNav">
+                                                <i class="fas fa-calculator fa-fw me-2"></i>NAV Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="unsubmittedItemsNav" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All NAV calculations that were saved without ticking the submit to checker button will be pending submission here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV unsubmitted items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the unsubmitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV unsubmitted items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Submit</strong> button allows you to submit the unsubmitted item for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Transaction Unsubmitted-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unsubmittedItemsTransaction">
+                                                <i class="fas fa-exchange-alt fa-fw me-2"></i>Transaction Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="unsubmittedItemsTransaction" class="accordion-collapse collapse" data-bs-parent="#unsubmittedAccordion">
+                                            <div class="accordion-body">
+                                                <p>All transactions that were saved without ticking the submit to checker button will be pending submission here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction unsubmitted items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the unsubmitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction unsubmitted items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Submit</strong> button allows you to submit the unsubmitted item for review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Authorizations -->
+                    <section id="authorizations" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-circle"></i>
+                                Authorizations
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Items for Authorizations</h5>
+                                <p class="card-text">All items that were submitted to checker will be pending approval or rejection here.</p>
+                                <p>All submitted items will remain in the Authorizations list until being approved by the checker</p>
+                                <div class="accordion" id="authorizationAccordion">
+                                    <!-- Master Setup Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationMasterSetup">
+                                                <i class="fas fa-server fa-fw me-2"></i>Master Setup Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationMasterSetup" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All master setups that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/master setup authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/master setup authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CIS Product Setup Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationCisProductSetup">
+                                                <i class="fas fa-users fa-fw me-2"></i>CIS Product Setup Authorization list
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationCisProductSetup" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All CIS setups that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/CIS product authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/CIS product authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--NAV Unsubmitted-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationNav">
+                                                <i class="fas fa-calculator fa-fw me-2"></i>NAV Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationNav" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All NAV calculations that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Transaction Unsubmitted-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationTransaction">
+                                                <i class="fas fa-exchange-alt fa-fw me-2"></i>Transaction Unsubmitted Items
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationTransaction" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All transactions that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Purchase Authorization-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationPurchase">
+                                                <i class="fas fa-shopping-cart fa-fw me-2"></i>Purchase Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationPurchase" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All purchase applications that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Purchase(Teller) Authorization-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationPurchaseTeller">
+                                                <i class="fas fa-cash-register fa-fw me-2"></i>Purchase (Teller) Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationPurchaseTeller" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All purchase applications that were submitted to checker by the teller will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase teller authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase teller authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Redemptions Authorization-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationRedemptions">
+                                                <i class="fas fa-undo fa-fw me-2"></i>Redemptions Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationRedemptions" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All redemption applications that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/redemption authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/redemption authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Accured Gains Authorization-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationAccruedGains">
+                                                <i class="fas fa-chart-line fa-fw me-2"></i>Accrued Gains Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationAccruedGains" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All accrued gains that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/accrued gains authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/accrued gains authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Fund Distribution Authorization-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authorizationFundDistribution">
+                                                <i class="fas fa-hand-holding-usd fa-fw me-2"></i>Fund Distribution Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="authorizationFundDistribution" class="accordion-collapse collapse" data-bs-parent="#authorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All fund distributions that were submitted to checker will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fund distribution authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p> 
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fund distribution authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Reversals -->
+                    <section id="reversals" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-undo"></i>
+                                Reversals
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Reversals</h5>
+                                <p class="card-text">All items that were submitted to checker for reversal will be pending approval or rejection here.</p>
+                                <p>All submitted items will remain in the Reversals list until being approved by the checker</p>
+                            </div>
+                            <div class="accordion" id="reversalAccordion">
+                                <!-- Purchase Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalPurchase">
+                                            <i class="fas fa-shopping-cart fa-fw me-2"></i>Purchase Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalPurchase" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All purchase applications that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/purchase reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/purchase reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Redemption Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalRedemptions">
+                                            <i class="fas fa-undo fa-fw me-2"></i>Redemption Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalRedemptions" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All redemption applications that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/redemption reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/redemption reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Transaction Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalTransaction">
+                                            <i class="fas fa-exchange-alt fa-fw me-2"></i>Transaction Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalTransaction" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All transactions that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/transaction reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/transaction reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NAV Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalNav">
+                                            <i class="fas fa-calculator fa-fw me-2"></i>NAV Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalNav" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All NAV calculations that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/NAV reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/NAV reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--NAV Fees Reversal-->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalNavFees">
+                                            <i class="fas fa-money-bill-wave fa-fw me-2"></i>NAV Fees Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalNavFees" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All NAV fees that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/NAV fees reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/NAV fees reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fund Distribution Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalFundDistribution">
+                                            <i class="fas fa-hand-holding-usd fa-fw me-2"></i>Fund Distribution Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalFundDistribution" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All fund distributions that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/fund distribution reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/fund distribution reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accrued Gains Reversal -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAccruedGains">
+                                            <i class="fas fa-chart-line fa-fw me-2"></i>Accrued Gains Reversal List
+                                        </button>
+                                    </h2>
+                                    <div id="reversalAccruedGains" class="accordion-collapse collapse" data-bs-parent="#reversalAccordion">
+                                        <div class="accordion-body">
+                                            <p>All accrued gains that were submitted for reversal will be pending approval or rejection here.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/accrued gains reversal items.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                            <div style="max-width: 800px; margin: 0 auto;">
+                                                <img src="images/accrued gains reversal items2.png" alt="#" style="width: 100%; height: auto;">
+                                            </div>
+                                            <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <!-- Authorize Reversals -->
+                    <section id="reversal-authorization" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-circle"></i>
+                                Reversal Authorizations
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Reversal Authorizations</h5>
+                                <p class="card-text">All items that were submitted to checker for reversal will be pending approval or rejection here.</p>
+                                <p>All submitted items will remain in the Reversal Authorization list until being approved by the checker</p>
+                                <div class="accordion" id="reversalAuthorizationAccordion">
+                                    <!-- Purchase Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationPurchase">
+                                                <i class="fas fa-shopping-cart fa-fw me-2"></i>Purchase Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationPurchase" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All purchase applications that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/purchase reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Redemption Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationRedemptions">
+                                                <i class="fas fa-undo fa-fw me-2"></i>Redemption Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationRedemptions" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All redemption applications that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/redemption reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/redemption reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Transaction Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationTransaction">
+                                                <i class="fas fa-exchange-alt fa-fw me-2"></i>Transaction Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationTransaction" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All transactions that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/transaction reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- NAV Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationNav">
+                                                <i class="fas fa-calculator fa-fw me-2"></i>NAV Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationNav" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All NAV calculations that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- NAV Fees Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationNavFees">
+                                                <i class="fas fa-money-bill-wave fa-fw me-2"></i>NAV Fees Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationNavFees" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All NAV fees that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV fees reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/NAV fees reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fund Distribution Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationFundDistribution">
+                                                <i class="fas fa-hand-holding-usd fa-fw me-2"></i>Fund Distribution Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationFundDistribution" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All fund distributions that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fund distribution reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/fund distribution reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accrued Gains Reversal Authorization -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reversalAuthorizationAccruedGains">
+                                                <i class="fas fa-chart-line fa-fw me-2"></i>Accrued Gains Reversal Authorization List
+                                            </button>
+                                        </h2>
+                                        <div id="reversalAuthorizationAccruedGains" class="accordion-collapse collapse" data-bs-parent="#reversalAuthorizationAccordion">
+                                            <div class="accordion-body">
+                                                <p>All accrued gains that were submitted for reversal will be pending approval or rejection here.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/accrued gains reversal authorization items.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>Clicking on the <strong>View</strong> button allows you to view the details of the submitted item.</p>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/accrued gains reversal authorization items2.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <p>While clicking on the <strong>Approve</strong> or <strong>Reject</strong> button allows you to approve or reject the submitted item for processing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Troubleshooting -->
+                    <section id="troubleshooting" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-wrench"></i>
+                                Troubleshooting
+                            </h2>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header text-white">
+                                <h5 class="mb-0">Common Issues and Solutions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="troubleshootingAccordion">
+                                    <!--NAV Issues-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navErrors">
+                                                <i class="fas fa-calculator me-2"></i>NAV Calculation Errors
+                                            </button>
+                                        </h2>
+                                        <div id="navErrors" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Issue:</strong> NAV run fails or produces incorrect values</p>
+                                                <p><strong>Solutions:</strong></p>
+                                                <ol>
+                                                    <li>Verify all asset valuations have been entered</li>
+                                                    <li>Check fund parameters and expense accruals</li>
+                                                    <li>Review error log for specific calculation issues</li>
+                                                    <li>Confirm unit/share balances are current</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Authorization Issues-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authIssues">
+                                                <i class="fas fa-check-circle me-2"></i>Authorization Problems
+                                            </button>
+                                        </h2>
+                                        <div id="authIssues" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Issue:</strong> Unable to authorize transactions</p>
+                                                <p><strong>Solutions:</strong></p>
+                                                <ol>
+                                                    <li>Verify you have proper authorization privileges</li>
+                                                    <li>Check for pending system notifications</li>
+                                                    <li>Confirm transaction details are complete</li>
+                                                    <li>Contact system administrator if issue persists</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Reconciliation Issues-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reconProblems">
+                                                <i class="fas fa-balance-scale me-2"></i>Reconciliation Issues
+                                            </button>
+                                        </h2>
+                                        <div id="reconProblems" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                                            <div class="accordion-body">
+                                                <p><strong>Issue:</strong> Reconciliation mismatches or failures</p>
+                                                <p><strong>Solutions:</strong></p>
+                                                <ol>
+                                                    <li>Verify all transactions have been processed</li>
+                                                    <li>Check for unposted receipts or payments</li>
+                                                    <li>Review cutoff times for transaction inclusion</li>
+                                                    <li>Confirm bank statement dates match system period</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <h6>Support Contact</h6>
+                                    <div class="p-3 bg-light rounded">
+                                        <p><i class="fas fa-envelope me-2 text-primary"></i> Email: <a href="mailto:mf-support@norbusepurse.com">mf-support@norbusepurse.com</a></p>
+                                        <p><i class="fas fa-phone me-2 text-success"></i> Phone: +233 **-***-****</p>
+                                        <p><i class="fas fa-clock me-2 text-info"></i> Hours: Monday-Friday, 7:00 AM - 6:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="btn border-0 back-to-top" id="backToTop" name="backToTop" title="Back to Top">
+        <i class="fa-solid fa-circle-arrow-up fa-bounce text-success"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Enhanced JavaScript Functionality -->
+    <script src="js/script.js"></script>
+</body>
+</html>
