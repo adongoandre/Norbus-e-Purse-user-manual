@@ -238,14 +238,10 @@
                                                 <p><strong>Broadcast SMS</strong> enables you to send mass SMS messages to all customers or 
                                                     selected customer groups for general announcements, promotions, and important updates.</p>
                                                 <h6>Broadcast Features:</h6>
-                                                <ul>
-                                                    <li><strong>Mass Messaging:</strong> Send SMS to all customers or filtered groups</li>
-                                                    <li><strong>Template Support:</strong> Use pre-defined templates for consistent messaging</li>
-                                                    <li><strong>Personalization:</strong> Include customer-specific information in messages</li>
-                                                    <li><strong>Scheduling:</strong> Schedule SMS delivery for optimal timing</li>
-                                                    <li><strong>Delivery Tracking:</strong> Monitor delivery status and success rates</li>
-                                                </ul>
-                                                <div class="alert alert-warning">
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/broadcast sms.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <div class="alert alert-warning mt-2">
                                                     <i class="fas fa-exclamation-triangle me-2"></i>
                                                     <strong>Important:</strong> Ensure compliance with SMS marketing regulations and opt-out requirements.
                                                 </div>
@@ -266,14 +262,10 @@
                                                 <p><strong>Contact From File</strong> allows you to upload customer contact lists from external files 
                                                     and send targeted SMS messages to specific customer segments.</p>
                                                 <h6>File-based Communication:</h6>
-                                                <ul>
-                                                    <li><strong>File Upload:</strong> Support for CSV, Excel, and text file formats</li>
-                                                    <li><strong>Data Validation:</strong> Automatic validation of phone numbers and customer data</li>
-                                                    <li><strong>Targeted Messaging:</strong> Send messages to specific customer lists</li>
-                                                    <li><strong>Batch Processing:</strong> Handle large customer lists efficiently</li>
-                                                    <li><strong>Error Handling:</strong> Report and manage invalid contacts</li>
-                                                </ul>
-                                                <div class="alert alert-info">
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/contact file.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <div class="alert alert-info mt-2">
                                                     <i class="fas fa-file-csv me-2"></i>
                                                     <strong>Supported Formats:</strong> CSV, Excel (.xlsx, .xls), and comma-separated text files.
                                                 </div>
@@ -310,14 +302,59 @@
                                         <div id="cisSms" class="accordion-collapse collapse" data-bs-parent="#systemSmsAccordion">
                                             <div class="accordion-body">
                                                 <span class="communication-type sms-type">CIS Module</span>
-                                                <p><strong>CIS SMS Notifications</strong> provide automated messaging for Customer Information System events 
+                                                <p><strong>CIS SMS Notifications</strong> provide automated messaging for collective Investment scheme events 
                                                     and operations, keeping customers informed about their account status and activities.</p>
                                                 <h6>CIS Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> System-wide announcements to all CIS users</li>
-                                                    <li><strong>Operational SMS:</strong> Transaction confirmations, account updates, and system notifications</li>
-                                                    <li><strong>On Events:</strong> Triggered messages for account opening, closures, and status changes</li>
-                                                </ul>
+                                                <div class="accordion" id="cisSMS">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cisgeneral">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="cisgeneral" class="accordion-collapse collapse" data-bs-parent="#cisSMS">
+                                                            <div class="accordion-body">
+                                                                <p>System-wide announcements to all CIS users</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis general broadcast.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational SMS-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cisoperational">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational SMS
+                                                            </button>
+                                                        </h2>
+                                                        <div id="cisoperational" class="accordion-collapse collapse" data-bs-parent="#cisSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Transaction confirmations, account updates, and system notifications</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis operational sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cisevent">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="cisevent" class="accordion-collapse collapse" data-bs-parent="#cisSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Triggered messages for account opening, closures, and status changes</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis event sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -334,12 +371,56 @@
                                                 <span class="communication-type sms-type">Portfolio Module</span>
                                                 <p><strong>Portfolio SMS Notifications</strong> deliver investment-related communications including 
                                                     portfolio updates, market alerts, and transaction confirmations.</p>
-                                                <h6>Portfolio Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> Market updates and portfolio announcements</li>
-                                                    <li><strong>Operational SMS:</strong> Trade confirmations, settlement notices, and portfolio changes</li>
-                                                    <li><strong>On Events:</strong> NAV updates, dividend distributions, and corporate actions</li>
-                                                </ul>
+                                                <div class="accordion" id="portSMS">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portgeneral">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portgeneral" class="accordion-collapse collapse" data-bs-parent="#portSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Market updates and portfolio announcements</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/port general broadcast.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational SMS-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portoperational">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational SMS
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portoperational" class="accordion-collapse collapse" data-bs-parent="#portSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Trade confirmations, settlement notices, and portfolio changes</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/port operational sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portevent">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portevent" class="accordion-collapse collapse" data-bs-parent="#portSMS">
+                                                            <div class="accordion-body">
+                                                                <p>NAV updates, dividend distributions, and corporate actions</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis event sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -356,12 +437,56 @@
                                                 <span class="communication-type sms-type">Provident Fund Module</span>
                                                 <p><strong>PF SMS Notifications</strong> handle provident fund-related communications including 
                                                     contribution confirmations, benefit statements, and withdrawal notifications.</p>
-                                                <h6>PF Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> Fund performance updates and scheme announcements</li>
-                                                    <li><strong>Operational SMS:</strong> Contribution receipts, benefit calculations, and account updates</li>
-                                                    <li><strong>On Events:</strong> Vesting milestones, withdrawal approvals, and scheme transfers</li>
-                                                </ul>
+                                                <div class="accordion" id="pfSMS">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfgeneral">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfgeneral" class="accordion-collapse collapse" data-bs-parent="#pfSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Fund performance updates and scheme announcements</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf general broadcast.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational SMS-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfoperational">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational SMS
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfoperational" class="accordion-collapse collapse" data-bs-parent="#pfSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Contribution receipts, benefit calculations, and account updates</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf operational sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfevent">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfevent" class="accordion-collapse collapse" data-bs-parent="#pfSMS">
+                                                            <div class="accordion-body">
+                                                                <p>Vesting milestones, withdrawal approvals, and scheme transfers</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf event sms.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -398,14 +523,10 @@
                                                 <p><strong>Broadcast Email</strong> provides comprehensive email marketing and communication capabilities 
                                                     for sending newsletters, announcements, and promotional content to customers.</p>
                                                 <h6>Email Broadcast Features:</h6>
-                                                <ul>
-                                                    <li><strong>Rich Content:</strong> HTML email templates with images, formatting, and branding</li>
-                                                    <li><strong>Mass Distribution:</strong> Send to all customers or segmented groups</li>
-                                                    <li><strong>Personalization:</strong> Dynamic content based on customer data</li>
-                                                    <li><strong>A/B Testing:</strong> Test different email versions for optimization</li>
-                                                    <li><strong>Delivery Analytics:</strong> Track open rates, click-through rates, and engagement</li>
-                                                </ul>
-                                                <div class="alert alert-success">
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/broadcast email.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <div class="alert alert-success mt-2">
                                                     <i class="fas fa-chart-line me-2"></i>
                                                     <strong>Analytics:</strong> Comprehensive email performance tracking and reporting available.
                                                 </div>
@@ -426,14 +547,10 @@
                                                 <p><strong>Contact From File</strong> enables targeted email campaigns using external customer lists 
                                                     and contact databases for precise customer segmentation.</p>
                                                 <h6>File-based Email Features:</h6>
-                                                <ul>
-                                                    <li><strong>Multiple Formats:</strong> Support for CSV, Excel, and various data formats</li>
-                                                    <li><strong>Email Validation:</strong> Automatic validation of email addresses</li>
-                                                    <li><strong>Custom Fields:</strong> Map file columns to personalization fields</li>
-                                                    <li><strong>Bounce Management:</strong> Handle invalid emails and bounces automatically</li>
-                                                    <li><strong>Unsubscribe Handling:</strong> Respect opt-out preferences and manage suppression lists</li>
-                                                </ul>
-                                                <div class="alert alert-warning">
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/contact file email.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                                <div class="alert alert-warning mt-2">
                                                     <i class="fas fa-shield-alt me-2"></i>
                                                     <strong>Privacy:</strong> Ensure GDPR compliance and customer consent before using external lists.
                                                 </div>
@@ -472,13 +589,58 @@
                                                 <span class="communication-type email-type">CIS Module</span>
                                                 <p><strong>CIS Email Notifications</strong> provide comprehensive email communications for Customer 
                                                     Information System events, including detailed account statements and documentation.</p>
-                                                <h6>CIS Email Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> System announcements and policy updates via email</li>
-                                                    <li><strong>Operational Email:</strong> Account statements, transaction confirmations, and notices</li>
-                                                    <li><strong>On Events:</strong> Welcome emails, account activation confirmations, and status updates</li>
-                                                </ul>
-                                                <div class="alert alert-info">
+                                                <h6>CIS Communication Types:</h6>
+                                                <div class="accordion" id="cisEMAIL">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#emailgeneral">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="emailgeneral" class="accordion-collapse collapse" data-bs-parent="#cisEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>System announcements and policy updates via email</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis general broadcast email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational SMS-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cisoperationalemail">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational Email
+                                                            </button>
+                                                        </h2>
+                                                        <div id="cisoperationalemail" class="accordion-collapse collapse" data-bs-parent="#cisEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Account statements, transaction confirmations, and notices</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis operational email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ciseventemail">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="ciseventemail" class="accordion-collapse collapse" data-bs-parent="#cisEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Welcome emails, account activation confirmations, and status updates</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis event email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="alert alert-info mt-2">
                                                     <i class="fas fa-file-pdf me-2"></i>
                                                     <strong>Attachments:</strong> Support for PDF statements, documents, and regulatory notices.
                                                 </div>
@@ -499,12 +661,57 @@
                                                 <p><strong>Portfolio Email Notifications</strong> deliver detailed investment communications including 
                                                     portfolio reports, market analysis, and performance summaries.</p>
                                                 <h6>Portfolio Email Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> Market insights, investment newsletters, and portfolio updates</li>
-                                                    <li><strong>Operational Email:</strong> Trade confirmations, settlement notices, and portfolio valuations</li>
-                                                    <li><strong>On Events:</strong> NAV reports, dividend statements, and corporate action notices</li>
-                                                </ul>
-                                                <div class="alert alert-success">
+                                                <div class="accordion" id="portEMAIL">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portgeneralemail">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portgeneralemail" class="accordion-collapse collapse" data-bs-parent="#portEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Market insights, investment newsletters, and portfolio updates</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/port general broadcast email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational Email-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portoperationalemail">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational Email
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portoperationalemail" class="accordion-collapse collapse" data-bs-parent="#portEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Trade confirmations, settlement notices, and portfolio valuations</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/port operational email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#portevent">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="portevent" class="accordion-collapse collapse" data-bs-parent="#portEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>NAV updates, dividend distributions, and corporate actions</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/cis event email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="alert alert-success mt-2">
                                                     <i class="fas fa-chart-bar me-2"></i>
                                                     <strong>Rich Reports:</strong> Detailed portfolio analytics and performance charts included.
                                                 </div>
@@ -525,12 +732,57 @@
                                                 <p><strong>PF Email Notifications</strong> handle comprehensive provident fund communications including 
                                                     annual statements, benefit projections, and regulatory compliance documents.</p>
                                                 <h6>PF Email Communication Types:</h6>
-                                                <ul>
-                                                    <li><strong>General Broadcast:</strong> Annual fund reports, scheme performance, and regulatory updates</li>
-                                                    <li><strong>Operational Email:</strong> Contribution statements, benefit calculations, and account summaries</li>
-                                                    <li><strong>On Events:</strong> Vesting notifications, withdrawal confirmations, and transfer certificates</li>
-                                                </ul>
-                                                <div class="alert alert-warning">
+                                                <div class="accordion" id="pfEMAIL">
+                                                    <!--general broadcast-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfgeneralemail">
+                                                                <i class="fa-solid fa-award me-2"></i>General Broadcast
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfgeneralemail" class="accordion-collapse collapse" data-bs-parent="#pfEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Annual fund reports, scheme performance, and regulatory updates</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf general broadcast email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Operational Email-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfoperationalemail">
+                                                                <i class="fa-solid fa-microchip me-2"></i>Operational Email
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfoperationalemail" class="accordion-collapse collapse" data-bs-parent="#pfEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Contribution statements, benefit calculations, and account summaries</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf operational email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--On Events-->
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfeventemail">
+                                                                <i class="fa-solid fa-champagne-glasses me-2"></i>On Events
+                                                            </button>
+                                                        </h2>
+                                                        <div id="pfeventemail" class="accordion-collapse collapse" data-bs-parent="#pfEMAIL">
+                                                            <div class="accordion-body">
+                                                                <p>Vesting notifications, withdrawal confirmations, and transfer certificates</p>
+                                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                                    <img src="images/pf event email.png" alt="#" style="width: 100%; height: auto;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="alert alert-warning mt-2">
                                                     <i class="fas fa-gavel me-2"></i>
                                                     <strong>Compliance:</strong> All PF communications must meet regulatory disclosure requirements.
                                                 </div>
@@ -569,15 +821,9 @@
                                                 <span class="communication-type sms-type">SMS Audit Trail</span>
                                                 <p><strong>SMS Logs</strong> provide comprehensive tracking and audit capabilities for all SMS communications 
                                                     sent through the system, ensuring compliance and delivery monitoring.</p>
-                                                <h6>SMS Log Features:</h6>
-                                                <ul>
-                                                    <li><strong>Delivery Status:</strong> Track sent, delivered, failed, and pending SMS messages</li>
-                                                    <li><strong>Recipient Details:</strong> Complete log of recipients, phone numbers, and customer IDs</li>
-                                                    <li><strong>Message Content:</strong> Archive of all SMS content sent through the system</li>
-                                                    <li><strong>Time Stamps:</strong> Precise timing of SMS creation, sending, and delivery</li>
-                                                    <li><strong>Cost Tracking:</strong> Monitor SMS usage and associated costs</li>
-                                                    <li><strong>Export Options:</strong> Download logs for external analysis and reporting</li>
-                                                </ul>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/sms logs.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
                                                 <div class="alert alert-info">
                                                     <i class="fas fa-search me-2"></i>
                                                     <strong>Search & Filter:</strong> Advanced filtering by date, recipient, message type, and delivery status.
@@ -598,57 +844,13 @@
                                                 <span class="communication-type email-type">Email Audit Trail</span>
                                                 <p><strong>Email Logs</strong> maintain detailed records of all email communications, including delivery 
                                                     statistics, engagement metrics, and compliance documentation.</p>
-                                                <h6>Email Log Features:</h6>
-                                                <ul>
-                                                    <li><strong>Delivery Analytics:</strong> Track opens, clicks, bounces, and unsubscribes</li>
-                                                    <li><strong>Campaign Performance:</strong> Detailed metrics for broadcast and targeted campaigns</li>
-                                                    <li><strong>Content Archive:</strong> Complete email content and template history</li>
-                                                    <li><strong>Recipient Management:</strong> Track email preferences and opt-out status</li>
-                                                    <li><strong>Error Reporting:</strong> Identify and resolve email delivery issues</li>
-                                                    <li><strong>Compliance Records:</strong> Maintain records for regulatory requirements</li>
-                                                </ul>
+                                                <div style="max-width: 800px; margin: 0 auto;">
+                                                    <img src="images/email logs.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
                                                 <div class="alert alert-success">
                                                     <i class="fas fa-chart-line me-2"></i>
                                                     <strong>Performance Metrics:</strong> Comprehensive email marketing analytics and ROI tracking.
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Communication Reports -->
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#communicationReports">
-                                                <i class="fas fa-chart-bar me-2"></i>Communication Reports
-                                            </button>
-                                        </h2>
-                                        <div id="communicationReports" class="accordion-collapse collapse" data-bs-parent="#logsAccordion">
-                                            <div class="accordion-body">
-                                                <h6>Available Reports:</h6>
-                                                <div class="workflow-step">
-                                                    <span class="step-number">1</span>
-                                                    <strong>Daily Communication Summary:</strong> Overview of all SMS and email activities
-                                                </div>
-                                                <div class="workflow-step">
-                                                    <span class="step-number">2</span>
-                                                    <strong>Module-wise Communication:</strong> Breakdown by CIS, Portfolio, and PF modules
-                                                </div>
-                                                <div class="workflow-step">
-                                                    <span class="step-number">3</span>
-                                                    <strong>Delivery Performance Report:</strong> Success rates, failures, and optimization insights
-                                                </div>
-                                                <div class="workflow-step">
-                                                    <span class="step-number">4</span>
-                                                    <strong>Customer Engagement Analysis:</strong> Response rates and communication preferences
-                                                </div>
-                                                
-                                                <h6 class="mt-4">Report Features:</h6>
-                                                <ul>
-                                                    <li><strong>Scheduled Reports:</strong> Automated daily, weekly, and monthly reports</li>
-                                                    <li><strong>Custom Date Ranges:</strong> Generate reports for specific time periods</li>
-                                                    <li><strong>Export Formats:</strong> PDF, Excel, and CSV export options</li>
-                                                    <li><strong>Dashboard Integration:</strong> Real-time communication metrics</li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
