@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbus e-Purse - Reporting Module Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+</head>
+
+<body class="bg-light">
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container-fluid manual-container">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <h4 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Norbus e-Purse</h4>
+                        <small class="opacity-75">Reporting Module Manual</small>
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+                        <div class="nav-item">
+                            <a href="#overview" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                Module Overview
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#crm-reports" class="nav-link">
+                                <i class="fas fa-flag"></i>
+                                CRM Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#asset-manager-reports" class="nav-link">
+                                <i class="fas fa-briefcase"></i>
+                                Asset Manager Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#cis-reports" class="nav-link">
+                                <i class="fas fa-chart-pie"></i>
+                                CIS Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#fund-admin-reports" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                Fund Administration Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#fund-accounting-reports" class="nav-link">
+                                <i class="fas fa-calculator"></i>
+                                Fund Accounting Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#excel-reports" class="nav-link">
+                                <i class="fas fa-file-excel"></i>
+                                Excel Reports
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#audit-reports" class="nav-link">
+                                <i class="fas fa-search"></i>
+                                Audit Reports
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <div class="main-content">
+                    <!-- Module Nav -->
+                    <nav class="nav">
+                        <div class="nav-item">
+                            <a href="generalSetups.html" class="module-link">GS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CRM.html" class="module-link">CRM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="CIS.html" class="module-link">CIS</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="assetManager.html" class="module-link">AM</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="Provident&groupFunds.html" class="module-link">PF</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="fundAccounting.html" class="module-link">FA</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="communication.html" class="module-link">S&E</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="reporting.html" class="module-link active">Reporting</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="backOfficeCashier.html" class="module-link">BOC</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="teller.html" class="module-link">Teller</a>
+                        </div>
+                    </nav>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="position-relative">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-box" placeholder="Search reports and documentation..." id="searchInput">
+                        </div>
+                    </div>
+                    <!-- System Overview -->
+                    <section id="overview" class="content-section fade-in">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i>
+                                Reporting Module Overview
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome to Norbus e-Purse Reporting Module</h5>
+                                <p class="card-text">The Reporting Module provides comprehensive reporting capabilities across all system modules, 
+                                    enabling stakeholders to access critical business information, regulatory reports, and operational insights. 
+                                    This module centralizes all reporting functions for efficient data analysis and decision-making.</p>
+                                <p class="card-text">The Reporting Module delivers complete functionality for:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Customer relationship management reports</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Asset management and portfolio analytics</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Collective investment scheme reporting</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Fund administration and member reports</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Financial accounting and GL reports</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Regulatory compliance reporting</li>
+                                    <li><i class="fa-solid fa-circle text-success fa-xs me-2"></i>Comprehensive audit trails and logs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Features Overview -->
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h6>CRM Reports</h6>
+                                <p class="small text-muted">Customer analytics, member management, and relationship reports</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h6>Asset Management</h6>
+                                <p class="small text-muted">Portfolio performance, investment analytics, and risk reports</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h6>CIS Reports</h6>
+                                <p class="small text-muted">Collective investment scheme performance and compliance reports</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h6>Fund Administration</h6>
+                                <p class="small text-muted">Member statements, contribution reports, and fund operations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h6>Fund Accounting</h6>
+                                <p class="small text-muted">General ledger, financial statements, and accounting reports</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h6>Audit Reports</h6>
+                                <p class="small text-muted">System audit trails, user activities, and compliance monitoring</p>
+                            </div>
+                        </div>
+                        <!-- Getting Started Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Getting Started with Reporting</h5>
+                                <div class="workflow-step">
+                                    <span class="step-number">1</span>
+                                    <strong>Access Control:</strong> Ensure appropriate permissions are granted for accessing specific report categories.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">2</span>
+                                    <strong>Report Selection:</strong> Navigate to the relevant report category based on your requirements.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">3</span>
+                                    <strong>Parameter Setup:</strong> Configure report parameters including date ranges, filters, and output formats.
+                                </div>
+                                <div class="workflow-step">
+                                    <span class="step-number">4</span>
+                                    <strong>Generation & Export:</strong> Generate reports and export in desired formats (PDF, Excel, CSV).
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Best Practice:</strong> Schedule regular reports for automated delivery to stakeholders.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CRM Reports -->
+                    <section id="crm-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-flag"></i>
+                                CRM Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Customer Relationship Management BIO-Data Reports</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="customerReportingAccordion">
+                                    <!-- Details -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#reportingCRMDetails">
+                                                <i class="fa-solid fa-info me-2"></i>Details
+                                            </button>
+                                        </h2>
+                                        <div id="reportingCRMDetails" class="accordion-collapse collapse" data-bs-parent="#customerReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/crm details.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Contact From File -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#reportingCRMSummeries">
+                                                <i class="fa-solid fa-list-ul me-2"></i>summaries
+                                            </button>
+                                        </h2>
+                                        <div id="reportingCRMSummeries" class="accordion-collapse collapse" data-bs-parent="#customerReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/crm summaries.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Asset Manager Reports -->
+                    <section id="asset-manager-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-briefcase"></i>
+                                Asset Manager Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Investment Portfolio and Asset Management Reports</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="AMReportingAccordion">
+                                    <!-- Reciepts -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMReciepts">
+                                                <i class="fa-solid fa-receipt me-2"></i>Reciepts
+                                            </button>
+                                        </h2>
+                                        <div id="AMReciepts" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am reciepts.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Client Activities Report -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMCAR">
+                                                <i class="fa-solid fa-chart-line me-2"></i>Client Activities Report
+                                            </button>
+                                        </h2>
+                                        <div id="AMCAR" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am client ar.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Investments and Trades-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMIT">
+                                                <i class="fa-solid fa-hand-holding-dollar me-2"></i>Investments and Trades
+                                            </button>
+                                        </h2>
+                                        <div id="AMIT" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am I&T.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Equities and CIS-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMECIS">
+                                                <i class="fa-solid fa-water me-2"></i>Equities and CIS
+                                            </button>
+                                        </h2>
+                                        <div id="AMECIS" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am E&C.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Valuation,Returns & Risks-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMVRR">
+                                                <i class="fa-solid fa-paperclip me-2"></i>Valuation,Returns & Risks
+                                            </button>
+                                        </h2>
+                                        <div id="AMVRR" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am V,R&R.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Regulatory Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMRR">
+                                                <i class="fa-solid fa-pen-to-square me-2"></i>Regulatory Reports
+                                            </button>
+                                        </h2>
+                                        <div id="AMRR" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am regulatory reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Global Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMGR">
+                                                <i class="fa-solid fa-globe me-2"></i>Global Reports
+                                            </button>
+                                        </h2>
+                                        <div id="AMGR" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am global reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Fund Accounting Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMFAR">
+                                                <i class="fa-solid fa-piggy-bank me-2"></i>Fund Accounting Reports
+                                            </button>
+                                        </h2>
+                                        <div id="AMFAR" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am FA reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Setup Data-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#AMSD">
+                                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>Setup Data
+                                            </button>
+                                        </h2>
+                                        <div id="AMSD" class="accordion-collapse collapse" data-bs-parent="#AMReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/am setup data.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CIS Reports -->
+                    <section id="cis-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-pie"></i>
+                                CIS Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Collective Investment Scheme Reporting
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="CISReportingAccordion">
+                                    <!-- Reciepts -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISReciepts">
+                                                <i class="fa-solid fa-receipt me-2"></i>Reciepts
+                                            </button>
+                                        </h2>
+                                        <div id="CISReciepts" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf receipts.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Client Administration -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISCA">
+                                                <i class="fa-solid fa-users me-2"></i>Client Administration
+                                            </button>
+                                        </h2>
+                                        <div id="CISCA" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf client administration.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--NAV Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISNAVR">
+                                                <i class="fa-solid fa-file-pen me-2"></i>NAV Reports
+                                            </button>
+                                        </h2>
+                                        <div id="CISNAVR" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf nav reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Operations Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISOR">
+                                                <i class="fa-solid fa-sliders me-2"></i>Operations Reports
+                                            </button>
+                                        </h2>
+                                        <div id="CISOR" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf operations reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Loads (Front Load & Back Loads)-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISL">
+                                                <i class="fa-solid fa-bars-progress me-2"></i>Loads (Front Load & Back Loads)
+                                            </button>
+                                        </h2>
+                                        <div id="CISL" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf loads.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Regulatory Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISRR">
+                                                <i class="fa-solid fa-pen-to-square me-2"></i>Regulatory Reports
+                                            </button>
+                                        </h2>
+                                        <div id="CISRR" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf regulatory reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Global Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISGR">
+                                                <i class="fa-solid fa-globe me-2"></i>Global Reports
+                                            </button>
+                                        </h2>
+                                        <div id="CISGR" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf global reports.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Setup-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#CISS">
+                                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>Setup
+                                            </button>
+                                        </h2>
+                                        <div id="CISS" class="accordion-collapse collapse" data-bs-parent="#CISReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/mf setups.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </section>
+                    <!-- Fund Administration Reports -->
+                    <section id="fund-admin-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-university"></i>
+                                Fund Administration Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Fund Administration
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="FAdminReportingAccordion">
+                                    <!-- Reciepts -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#FAdminReciepts">
+                                                <i class="fa-solid fa-receipt me-2"></i>Reciepts
+                                            </button>
+                                        </h2>
+                                        <div id="FAdminReciepts" class="accordion-collapse collapse" data-bs-parent="#FAdminReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/fa reciepts.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Member Administration-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#FAdminMA">
+                                                <i class="fa-solid fa-users-gear me-2"></i>Member Administration
+                                            </button>
+                                        </h2>
+                                        <div id="FAdminMA" class="accordion-collapse collapse" data-bs-parent="#FAdminReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/fa member administation.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Administration -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#FAdminA">
+                                                <i class="fa-solid fa-gears me-2"></i>Administration
+                                            </button>
+                                        </h2>
+                                        <div id="FAdminA" class="accordion-collapse collapse" data-bs-parent="#FAdminReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/fa administrative.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--NAV Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#FAdminNAVR">
+                                                <i class="fa-solid fa-file-pen me-2"></i>NAV Reports
+                                            </button>
+                                        </h2>
+                                        <div id="FAdminNAVR" class="accordion-collapse collapse" data-bs-parent="#FAdminReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/fa nav.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Fund Accounting Reports -->
+                    <section id="fund-accounting-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i>
+                                Fund Accounting Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Fund Accounts Reports</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="FAReportingAccordion">
+                                    <!--Fund Accounting Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#FAFAR">
+                                                <i class="fa-solid fa-gear me-2"></i>General
+                                            </button>
+                                        </h2>
+                                        <div id="FAFAR" class="accordion-collapse collapse" data-bs-parent="#FAReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/f accounts general.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Excel Reports -->
+                    <section id="excel-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-file-excel"></i>
+                                Excel Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Regulatory and Excel-Based Reporting</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="ERReportingAccordion">
+                                    <!--Excel Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#ERRR">
+                                                <i class="fa-solid fa-gear me-2"></i>Regulattory Reports
+                                            </button>
+                                        </h2>
+                                        <div id="ERRR" class="accordion-collapse collapse" data-bs-parent="#ERReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/ER RR.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Audit Reports -->
+                    <section id="audit-reports" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Audit Reports
+                            </h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Investment Portfolio and Asset Management Reporting</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="ARReportingAccordion">
+                                    <!--Audit Reports-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#ARAR">
+                                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>Audit Report
+                                            </button>
+                                        </h2>
+                                        <div id="ARAR" class="accordion-collapse collapse" data-bs-parent="#ARReportingAccordion">
+                                            <div class="accordion-body">
+                                               <div style="max-width: 400px; margin: 0 auto;">
+                                                    <img src="images/audit report.png" alt="#" style="width: 100%; height: auto;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <button class="btn border-0 back-to-top" id="backToTop" name="backToTop" title="Back to Top">
+        <i class="fa-solid fa-circle-arrow-up fa-bounce text-success"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
